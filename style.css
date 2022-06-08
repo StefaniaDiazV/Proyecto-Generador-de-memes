@@ -68,7 +68,7 @@
 /* ******** Panel de texto********** */
 
 .panel-texto{
-    width: 14rem;
+    width: 15rem;
     height: 100vh;
     padding: 2rem 1rem;
     background-color: rgb(14, 14, 14);
@@ -77,12 +77,69 @@
     z-index: 3;
     left: 100;
     top: 0;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    
 }
 
 .panel-texto h2{
     text-align: center;
 }
+
+.titulos-panel-texto{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.contenedor-checkbox{
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+input[type='checkbox']{
+    margin: 0 0.2rem 0 0;
+}
+
+#tamano-fuente{
+    width: 50%;
+}
+
+.btns-alineado{
+    align-items: flex-end;
+    width: calc(50% / 3 - 0.3rem);
+    margin-left: 0.2rem;
+}
+
+.controles-fuente{
+    display: flex;
+    width: 100%;
+    margin-top: 0.3rem;
+}
+
+.contenedor-colores-texto{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.contenedor-color-texto{
+    width: calc(100% /2 );
+}
+
+.contenedor-btn-contorno{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-contorno{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
 
 /* ******** Panel de imagen ********** */
 
@@ -96,8 +153,10 @@
     z-index: 3;
     left: 100;
     top: 0;
+    display: none;
 }
 
 .panel-imagen h2{
     text-align: center;
 }
+

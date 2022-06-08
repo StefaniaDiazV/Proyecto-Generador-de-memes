@@ -31,17 +31,20 @@
     <div class="panel-texto">
         <h2>TEXTO</h2>
 
-        <label for="superior">SUPERIOR</label>
+        <label class="titulos-panel-texto" for="superior">SUPERIOR</label>
         <input id="superior" name="superior" type="text">
-        <input id="sin-texto-superior" type="checkbox">
-        <label for="sin-texto-superior">Sin texto superior</label>
+        <div class="contenedor-checkbox">
+            <input id="sin-texto-superior" type="checkbox">
+            <label for="sin-texto-superior">Sin texto superior</label>
+        </div>
 
-        <label for="inferior">INFERIOR</label>
+        <label class="titulos-panel-texto" for="inferior">INFERIOR</label>
         <input id="inferior" name="inferior" type="text">
-        <input id="sin-texto-inferior" type="checkbox">
-        <label for="sin-texto-inferior">Sin texto inferior</label>
-
-        <label for="fuente">FUENTE</label>
+        <div class="contenedor-checkbox">
+            <input id="sin-texto-inferior" type="checkbox">
+            <label for="sin-texto-inferior">Sin texto inferior</label>
+        </div>
+        <label class="titulos-panel-texto" for="fuente">FUENTE</label>
         <select id="fuente" name="fuente">
             <option>Arial</option>
             <option>Arial Black</option>
@@ -54,36 +57,46 @@
             <option>Times New Roman</option>
         </select>
 
-        <label for="tamano-fuente"></label>
-        <input type="number" id="tamano-fuente" name="tamano-fuente" min="12" value="40">
+        <div class="controles-fuente">
+            <label for="tamano-fuente"></label>
+            <input type="number" id="tamano-fuente" name="tamano-fuente" min="12" value="40">
 
-        <button id="btn-alinear-izquierda">
-            <i class="fa-solid fa-align-left"></i>
-        </button>
-        <button id="btn-centrar">
-            <i class="fa-solid fa-align-center"></i>
-        </button>
-        <button id="btn-alinear-derecha">
-            <i class="fa-solid fa-align-right"></i>
-        </button>
+            <button class="btns-alineado" id="btn-alinear-izquierda">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button class="btns-alineado" id="btn-centrar">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button class="btns-alineado" id="btn-alinear-derecha">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+        </div>
 
-        <label for="color-letra">COLOR</label>
-        <input id="color-letra" name="color-letra" type="color">
+        <div class="contenedor-colores-texto">
+            <div class="contenedor-color-texto">
+                <label class="titulos-panel-texto" for="color-letra">COLOR</label>
+                <input id="color-letra" name="color-letra" type="color">
+            </div>
+            <div class="contenedor-color-texto" >
+                <label class="titulos-panel-texto" for="color-fondo">FONDO</label>
+                <input id="color-fondo" name="color-fondo" type="color">
+            </div>
+        </div>
 
-        <label for="color-fondo">FONDO</label>
-        <input id="color-fondo" name="color-fondo" type="color">
-        <input id="fondo-transparente" type="checkbox">
-        <label for="fondo-transparente">Fondo transparente</label>
-
-        <h3>CONTORNO</h3>
-        <button id="contorno-ninguno">Ninguno</button>
-        <button id="contorno-claro">Claro</button>
-        <button id="contorno-oscuro">Oscuro</button>
-
-        <label for="espaciado-texto">ESPACIADO</label>
+        <div class="contenedor-checkbox">
+            <input id="fondo-transparente" type="checkbox">
+            <label for="fondo-transparente">Fondo transparente</label>
+        </div>
+        <h3 class="titulos-panel-texto">CONTORNO</h3>
+        <div class="contenedor-btn-contorno">
+            <button class="btn-contorno" id="contorno-ninguno">Ninguno</button>
+            <button class="btn-contorno" id="contorno-claro">Claro</button>
+            <button class="btn-contorno" id="contorno-oscuro">Oscuro</button>
+        </div>
+        <label class="titulos-panel-texto" for="espaciado-texto">ESPACIADO</label>
         <input type="number" id="espaciado-texto" name="espaciado-texto" min="10" max="50" value="35">
 
-        <label for="interlineado-texto">INTERLINEADO</label>
+        <label class="titulos-panel-texto" for="interlineado-texto">INTERLINEADO</label>
         <select id="interlineado-texto" name="interlineado-texto">
             <option>0.8</option>
             <option>1</option>
