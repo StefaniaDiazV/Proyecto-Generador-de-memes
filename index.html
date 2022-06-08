@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Generador de memes</title>
+</head>
+<body>
+
+    <header class="menu-principal">
+        <h1 class="titulo">Generador de memes</h1>
+        <div class="contenedor-botones">
+            <button class="btn-menu">Imagen</button>
+            <button class="btn-menu">Texto</button>
+            <button class="btn-menu">Modo oscuro</button>
+        </div>
+    </header>
+
+
+    <section class="contenedor-memes">
+        <div class="editor-memes">
+            <p class="contenedor-texto">TOP TEXT</p>
+            <div class="contenedor-imagen"></div>
+            <p class="contenedor-texto">BOTTOM TEXT</p>
+        </div>
+    </section>
+
+    <div class="panel-texto">
+        <h2>TEXTO</h2>
+
+        <label for="superior">SUPERIOR</label>
+        <input id="superior" name="superior" type="text">
+        <input id="sin-texto-superior" type="checkbox">
+        <label for="sin-texto-superior">Sin texto superior</label>
+
+        <label for="inferior">INFERIOR</label>
+        <input id="inferior" name="inferior" type="text">
+        <input id="sin-texto-inferior" type="checkbox">
+        <label for="sin-texto-inferior">Sin texto inferior</label>
+
+        <label for="fuente">FUENTE</label>
+        <select id="fuente" name="fuente">
+            <option>Arial</option>
+            <option>Arial Black</option>
+            <option>American Typewriter</option>
+            <option>Andale Mono</option>
+            <option>Comic Sans MS</option>
+            <option>Helvetica</option>
+            <option>Impact</option>
+            <option>Verdana</option>
+            <option>Times New Roman</option>
+        </select>
+
+        <label for="tamano-fuente"></label>
+        <input type="number" id="tamano-fuente" name="tamano-fuente" min="12" value="40">
+
+        <button id="btn-alinear-izquierda">
+            <i class="fa-solid fa-align-left"></i>
+        </button>
+        <button id="btn-centrar">
+            <i class="fa-solid fa-align-center"></i>
+        </button>
+        <button id="btn-alinear-derecha">
+            <i class="fa-solid fa-align-right"></i>
+        </button>
+
+        <label for="color-letra">COLOR</label>
+        <input id="color-letra" name="color-letra" type="color">
+
+        <label for="color-fondo">FONDO</label>
+        <input id="color-fondo" name="color-fondo" type="color">
+        <input id="fondo-transparente" type="checkbox">
+        <label for="fondo-transparente">Fondo transparente</label>
+
+        <h3>CONTORNO</h3>
+        <button id="contorno-ninguno">Ninguno</button>
+        <button id="contorno-claro">Claro</button>
+        <button id="contorno-oscuro">Oscuro</button>
+
+        <label for="espaciado-texto">ESPACIADO</label>
+        <input type="number" id="espaciado-texto" name="espaciado-texto" min="10" max="50" value="35">
+
+        <label for="interlineado-texto">INTERLINEADO</label>
+        <select id="interlineado-texto" name="interlineado-texto">
+            <option>0.8</option>
+            <option>1</option>
+            <option>1.2</option>
+            <option>1.5</option>
+            <option>2</option>
+            <option>2.5</option>
+        </select>
+
+    </div>
+
+
+    <div class="panel-imagen">
+        <h2>IMAGEN</h2>
+
+        <label for="url-imagen">URL</label>
+        <input id="url-imagen" name="url-imagen" type="text">
+
+        <label for="color-fondo-imagen">FONDO</label>
+        <input id="color-fondo-imagen" name="color-fondo-imagen" type="color">
+        <select id="color-fondo-imagen" name="color-fondo-imagen">
+            <option>Ninguno</option>
+            <option>Aclarar</option>
+            <option>Oscurecer</option>
+            <option>Diferencia</option>
+            <option>Luminosidad</option>
+            <option>Multiplicar</option>
+        </select>
+
+        <h3>FILTROS</h3>
+
+        <label for="brillo-imagen">BRILLO</label>
+        <input id="brillo-imagen" type="range">
+
+        <label for="opacidad-imagen">OPACIDAD</label>
+        <input id="opacidad-imagen" type="range">
+
+        <label for="contraste-imagen">CONTRASTE</label>
+        <input id="contraste-imagen" type="range">
+
+        <label for="desenfoque-imagen">DESENFOQUE</label>
+        <input id="desenfoque-imagen" type="range">
+
+        <label for="escala-de-grises-imagen">ESCALA DE GRISES</label>
+        <input id="escala-de-grises-imagen" type="range">
+
+        <label for="sepia-imagen">SEPIA</label>
+        <input id="sepia-imagen" type="range">
+
+        <label for="hue-imagen">HUE</label>
+        <input id="hue-imagen" type="range">
+
+        <label for="saturado-imagen">SATURADO</label>
+        <input id="saturado-imagen" type="range">
+
+        <label for="negativo-imagen">NEGATIVO</label>
+        <input id="negativo-imagen" type="range">
+
+        <button id="btn-reestablecer-filtros">Reestablecer filtros</button>
+
+    </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
