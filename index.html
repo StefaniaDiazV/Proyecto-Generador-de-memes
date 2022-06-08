@@ -31,20 +31,20 @@
     <div class="panel-texto">
         <h2>TEXTO</h2>
 
-        <label class="titulos-panel-texto" for="superior">SUPERIOR</label>
+        <label class="titulos-panel" for="superior">SUPERIOR</label>
         <input id="superior" name="superior" type="text">
         <div class="contenedor-checkbox">
             <input id="sin-texto-superior" type="checkbox">
             <label for="sin-texto-superior">Sin texto superior</label>
         </div>
 
-        <label class="titulos-panel-texto" for="inferior">INFERIOR</label>
+        <label class="titulos-panel" for="inferior">INFERIOR</label>
         <input id="inferior" name="inferior" type="text">
         <div class="contenedor-checkbox">
             <input id="sin-texto-inferior" type="checkbox">
             <label for="sin-texto-inferior">Sin texto inferior</label>
         </div>
-        <label class="titulos-panel-texto" for="fuente">FUENTE</label>
+        <label class="titulos-panel" for="fuente">FUENTE</label>
         <select id="fuente" name="fuente">
             <option>Arial</option>
             <option>Arial Black</option>
@@ -74,11 +74,11 @@
 
         <div class="contenedor-colores-texto">
             <div class="contenedor-color-texto">
-                <label class="titulos-panel-texto" for="color-letra">COLOR</label>
+                <label class="titulos-panel" for="color-letra">COLOR</label>
                 <input id="color-letra" name="color-letra" type="color">
             </div>
             <div class="contenedor-color-texto" >
-                <label class="titulos-panel-texto" for="color-fondo">FONDO</label>
+                <label class="titulos-panel" for="color-fondo">FONDO</label>
                 <input id="color-fondo" name="color-fondo" type="color">
             </div>
         </div>
@@ -87,16 +87,16 @@
             <input id="fondo-transparente" type="checkbox">
             <label for="fondo-transparente">Fondo transparente</label>
         </div>
-        <h3 class="titulos-panel-texto">CONTORNO</h3>
+        <h3 class="titulos-panel">CONTORNO</h3>
         <div class="contenedor-btn-contorno">
             <button class="btn-contorno" id="contorno-ninguno">Ninguno</button>
             <button class="btn-contorno" id="contorno-claro">Claro</button>
             <button class="btn-contorno" id="contorno-oscuro">Oscuro</button>
         </div>
-        <label class="titulos-panel-texto" for="espaciado-texto">ESPACIADO</label>
+        <label class="titulos-panel" for="espaciado-texto">ESPACIADO</label>
         <input type="number" id="espaciado-texto" name="espaciado-texto" min="10" max="50" value="35">
 
-        <label class="titulos-panel-texto" for="interlineado-texto">INTERLINEADO</label>
+        <label class="titulos-panel" for="interlineado-texto">INTERLINEADO</label>
         <select id="interlineado-texto" name="interlineado-texto">
             <option>0.8</option>
             <option>1</option>
@@ -112,50 +112,53 @@
     <div class="panel-imagen">
         <h2>IMAGEN</h2>
 
-        <label for="url-imagen">URL</label>
+        <label class="titulos-panel" for="url-imagen">URL</label>
         <input id="url-imagen" name="url-imagen" type="text">
 
-        <label for="color-fondo-imagen">FONDO</label>
-        <input id="color-fondo-imagen" name="color-fondo-imagen" type="color">
-        <select id="color-fondo-imagen" name="color-fondo-imagen">
-            <option>Ninguno</option>
-            <option>Aclarar</option>
-            <option>Oscurecer</option>
-            <option>Diferencia</option>
-            <option>Luminosidad</option>
-            <option>Multiplicar</option>
-        </select>
 
-        <h3>FILTROS</h3>
+        <label class="titulos-panel" for="color-fondo-imagen">FONDO</label>
+        <div class="controles-fondo-imagen">
+            <input class="control-fondo-imagen" id="color-fondo-imagen" name="color-fondo-imagen" type="color">
+            <select class="control-fondo-imagen" id="color-fondo-imagen" name="color-fondo-imagen">
+                <option>Ninguno</option>
+                <option>Aclarar</option>
+                <option>Oscurecer</option>
+                <option>Diferencia</option>
+                <option>Luminosidad</option>
+                <option>Multiplicar</option>
+            </select>
+        </div>
 
-        <label for="brillo-imagen">BRILLO</label>
+        <h3 class="titulos-panel">FILTROS</h3>
+
+        <label class="titulos-panel" for="brillo-imagen">BRILLO</label>
         <input id="brillo-imagen" type="range">
 
-        <label for="opacidad-imagen">OPACIDAD</label>
+        <label class="titulos-panel" for="opacidad-imagen">OPACIDAD</label>
         <input id="opacidad-imagen" type="range">
 
-        <label for="contraste-imagen">CONTRASTE</label>
+        <label class="titulos-panel" for="contraste-imagen">CONTRASTE</label>
         <input id="contraste-imagen" type="range">
 
-        <label for="desenfoque-imagen">DESENFOQUE</label>
+        <label class="titulos-panel" for="desenfoque-imagen">DESENFOQUE</label>
         <input id="desenfoque-imagen" type="range">
 
-        <label for="escala-de-grises-imagen">ESCALA DE GRISES</label>
+        <label class="titulos-panel" for="escala-de-grises-imagen">ESCALA DE GRISES</label>
         <input id="escala-de-grises-imagen" type="range">
 
-        <label for="sepia-imagen">SEPIA</label>
+        <label class="titulos-panel" for="sepia-imagen">SEPIA</label>
         <input id="sepia-imagen" type="range">
 
-        <label for="hue-imagen">HUE</label>
+        <label class="titulos-panel" for="hue-imagen">HUE</label>
         <input id="hue-imagen" type="range">
 
-        <label for="saturado-imagen">SATURADO</label>
+        <label class="titulos-panel" for="saturado-imagen">SATURADO</label>
         <input id="saturado-imagen" type="range">
 
-        <label for="negativo-imagen">NEGATIVO</label>
+        <label class="titulos-panel" for="negativo-imagen">NEGATIVO</label>
         <input id="negativo-imagen" type="range">
 
-        <button id="btn-reestablecer-filtros">Reestablecer filtros</button>
+        <button  id="btn-reestablecer-filtros">Reestablecer filtros</button>
 
     </div>
 
