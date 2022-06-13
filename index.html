@@ -32,20 +32,20 @@
         <h2>TEXTO</h2>
 
         <label class="titulos-panel" for="superior">SUPERIOR</label>
-        <input id="superior" name="superior" type="text">
+        <input class="input-panel" id="superior" name="superior" type="text">
         <div class="contenedor-checkbox">
             <input id="sin-texto-superior" type="checkbox">
             <label for="sin-texto-superior">Sin texto superior</label>
         </div>
 
         <label class="titulos-panel" for="inferior">INFERIOR</label>
-        <input id="inferior" name="inferior" type="text">
+        <input class="input-panel"  id="inferior" name="inferior" type="text">
         <div class="contenedor-checkbox">
             <input id="sin-texto-inferior" type="checkbox">
             <label for="sin-texto-inferior">Sin texto inferior</label>
         </div>
         <label class="titulos-panel" for="fuente">FUENTE</label>
-        <select id="fuente" name="fuente">
+        <select class="input-panel" id="fuente" name="fuente">
             <option>Arial</option>
             <option>Arial Black</option>
             <option>American Typewriter</option>
@@ -59,7 +59,7 @@
 
         <div class="controles-fuente">
             <label for="tamano-fuente"></label>
-            <input type="number" id="tamano-fuente" name="tamano-fuente" min="12" value="40">
+            <input class="input-panel" type="number" id="tamano-fuente" name="tamano-fuente" min="12" value="40">
 
             <button class="btns-alineado" id="btn-alinear-izquierda">
                 <i class="fa-solid fa-align-left"></i>
@@ -75,11 +75,15 @@
         <div class="contenedor-colores-texto">
             <div class="contenedor-color-texto">
                 <label class="titulos-panel" for="color-letra">COLOR</label>
-                <input id="color-letra" name="color-letra" type="color">
+                <div class="input-color">
+                    <input id="color-letra" name="color-letra" type="color">
+                </div>
             </div>
             <div class="contenedor-color-texto" >
                 <label class="titulos-panel" for="color-fondo">FONDO</label>
-                <input id="color-fondo" name="color-fondo" type="color">
+                <div class="input-color" >
+                <input  id="color-fondo" name="color-fondo" type="color">
+                </div>
             </div>
         </div>
 
@@ -94,10 +98,10 @@
             <button class="btn-contorno" id="contorno-oscuro">Oscuro</button>
         </div>
         <label class="titulos-panel" for="espaciado-texto">ESPACIADO</label>
-        <input type="number" id="espaciado-texto" name="espaciado-texto" min="10" max="50" value="35">
+        <input class="input-panel" type="number" id="espaciado-texto" name="espaciado-texto" min="10" max="50" value="35">
 
         <label class="titulos-panel" for="interlineado-texto">INTERLINEADO</label>
-        <select id="interlineado-texto" name="interlineado-texto">
+        <select class="input-panel" id="interlineado-texto" name="interlineado-texto">
             <option>0.8</option>
             <option>1</option>
             <option>1.2</option>

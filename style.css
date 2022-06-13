@@ -9,7 +9,7 @@
     height: 7rem;
     width: 100%;
     padding: 1rem 0.5rem;
-    background-color: black;
+    background-color: #191e2b;
     color: white;
     display: flex;
     flex-direction: column;
@@ -24,19 +24,20 @@
 .btn-menu{
     padding: 0.5rem;
     color: white;
-    background-color: black;
-    border-radius: 0.5rem;
+    border: #191e2b 1px;
+    background-color: #191e2b;
+    border-radius: 0.3rem;
     font-size: 0.9rem;
 }
 
 .btn-menu:hover{
-    background-color: rgb(40, 39, 39);
+    background-color: #5b6070;
     transition: 0.2s;
 }
 
 .contenedor-memes{
     height: 100vh;
-    background-color: lightgrey;
+    background-color:#30343f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +47,7 @@
 
 .editor-memes{
     width: 38rem ;
-    background-color: rgb(230, 14, 14);
+    background-color: #30343f;
 }
 
 .contenedor-texto{
@@ -71,7 +72,7 @@
     width: 15rem;
     height: 100vh;
     padding: 2rem 1rem;
-    background-color: rgb(14, 14, 14);
+    background-color: #252935;
     color: white;
     position: fixed;
     z-index: 3;
@@ -79,20 +80,29 @@
     top: 0;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
-    display: none;
+    overflow-y: scroll; 
+}
 
-    
+.input-panel{
+    height: 2rem;
+    background-color: #393e49;
+    color: white;
+    border: 0;
+    padding: 0.3rem 0.5rem;
+    outline: none;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
 }
 
 .panel-texto h2{
     text-align: center;
 }
 
+
+
 .titulos-panel{
     margin-top: 1rem;
-    margin-bottom: 0.3rem;
-    
+    margin-bottom: 0.3rem;    
 }
 
 .contenedor-checkbox{
@@ -116,6 +126,7 @@ input[type='checkbox']{
 }
 
 .controles-fuente{
+    height: 2rem;
     display: flex;
     width: 100%;
     margin-top: 0.3rem;
@@ -125,10 +136,29 @@ input[type='checkbox']{
     width: 100%;
     margin-top: 1rem;
     display: flex;
+    justify-content: space-around;
 }
 
 .contenedor-color-texto{
-    width: calc(100% /2 );
+    width: calc(100% /2 - 0.6rem );
+
+}
+
+.input-color{
+    margin-top: 0.3rem;
+    background-color:white;
+    border: none;
+}
+
+input[type='color'] , input[type='color']::-webkit-color-swatch{
+    width: 1.1rem;
+    height: 1.1rem;
+    min-width: 1.1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 10px;
 }
 
 .contenedor-btn-contorno{
@@ -137,11 +167,18 @@ input[type='checkbox']{
 }
 
 .btn-contorno{
+    color: white;
+    border: #191e2b 1px;
+    background-color: #191e2b;
+    border-radius: 0.3rem;
     padding: 0.5rem;
-    border-radius: 0.5rem;
     font-size: 0.9rem;
 }
 
+.btn-contorno:hover{
+    background-color: #5b6070;
+    transition: 0.2s;
+}
 
 /* ******** Panel de imagen ********** */
 
@@ -149,7 +186,7 @@ input[type='checkbox']{
     width: 15rem;
     height: 100vh;
     padding: 2rem 1rem;
-    background-color: rgb(14, 14, 14);
+    background-color: #252935;
     color: white;
     position: fixed;
     z-index: 3;
@@ -158,6 +195,7 @@ input[type='checkbox']{
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    display: none;
    
 }
 
