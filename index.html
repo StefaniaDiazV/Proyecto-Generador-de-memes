@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Generador de memes</title>
@@ -13,9 +16,9 @@
     <header class="menu-principal">
         <h1 class="titulo">Generador de memes</h1>
         <div class="contenedor-botones">
-            <button class="btn-menu">Imagen</button>
-            <button class="btn-menu">Texto</button>
-            <button class="btn-menu">Modo oscuro</button>
+            <button id="btn-imagen" class="btn-menu">Imagen</button>
+            <button id="btn-texto" class="btn-menu">Texto</button>
+            <button id="btn-modo-oscuro" class="btn-menu">Modo oscuro</button>
         </div>
     </header>
 
@@ -28,21 +31,21 @@
         </div>
     </section>
 
-    <div class="panel-texto">
+    <div id="panel-texto" class="panel-texto ocultar">
         <h2>TEXTO</h2>
 
         <label class="titulos-panel" for="superior">SUPERIOR</label>
         <input class="input-panel" id="superior" name="superior" type="text">
         <div class="contenedor-checkbox">
             <input id="sin-texto-superior" type="checkbox">
-            <label for="sin-texto-superior">Sin texto superior</label>
+            <label class="texto-checkbox" for="sin-texto-superior">Sin texto superior</label>
         </div>
 
         <label class="titulos-panel" for="inferior">INFERIOR</label>
         <input class="input-panel"  id="inferior" name="inferior" type="text">
         <div class="contenedor-checkbox">
             <input id="sin-texto-inferior" type="checkbox">
-            <label for="sin-texto-inferior">Sin texto inferior</label>
+            <label class="texto-checkbox" for="sin-texto-inferior">Sin texto inferior</label>
         </div>
         <label class="titulos-panel" for="fuente">FUENTE</label>
         <select class="input-panel" id="fuente" name="fuente">
@@ -89,7 +92,7 @@
 
         <div class="contenedor-checkbox">
             <input id="fondo-transparente" type="checkbox">
-            <label for="fondo-transparente">Fondo transparente</label>
+            <label class="texto-checkbox" for="fondo-transparente">Fondo transparente</label>
         </div>
         <h3 class="titulos-panel">CONTORNO</h3>
         <div class="contenedor-btn-contorno">
@@ -113,7 +116,7 @@
     </div>
 
 
-    <div class="panel-imagen">
+    <div id="panel-imagen" class="panel-imagen  ocultar">
         <h2>IMAGEN</h2>
 
         <label class="titulos-panel" for="url-imagen">URL</label>
