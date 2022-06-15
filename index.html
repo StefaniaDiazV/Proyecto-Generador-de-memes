@@ -117,13 +117,15 @@
         <h2>IMAGEN</h2>
 
         <label class="titulos-panel" for="url-imagen">URL</label>
-        <input id="url-imagen" name="url-imagen" type="text">
+        <input class="input-panel" id="url-imagen" name="url-imagen" type="text">
 
 
         <label class="titulos-panel" for="color-fondo-imagen">FONDO</label>
         <div class="controles-fondo-imagen">
-            <input class="control-fondo-imagen" id="color-fondo-imagen" name="color-fondo-imagen" type="color">
-            <select class="control-fondo-imagen" id="color-fondo-imagen" name="color-fondo-imagen">
+            <div class="control-fondo-imagen input-color">
+                <input id="color-fondo-imagen" name="color-fondo-imagen" type="color">
+            </div>
+            <select class="input-panel control-fondo-imagen"  id="color-fondo-imagen" name="color-fondo-imagen">
                 <option>Ninguno</option>
                 <option>Aclarar</option>
                 <option>Oscurecer</option>
@@ -136,33 +138,33 @@
         <h3 class="titulos-panel">FILTROS</h3>
 
         <label class="titulos-panel" for="brillo-imagen">BRILLO</label>
-        <input id="brillo-imagen" type="range">
+        <input id="brillo-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="opacidad-imagen">OPACIDAD</label>
-        <input id="opacidad-imagen" type="range">
+        <input id="opacidad-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="contraste-imagen">CONTRASTE</label>
-        <input id="contraste-imagen" type="range">
+        <input id="contraste-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="desenfoque-imagen">DESENFOQUE</label>
-        <input id="desenfoque-imagen" type="range">
+        <input id="desenfoque-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="escala-de-grises-imagen">ESCALA DE GRISES</label>
-        <input id="escala-de-grises-imagen" type="range">
+        <input id="escala-de-grises-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="sepia-imagen">SEPIA</label>
-        <input id="sepia-imagen" type="range">
+        <input id="sepia-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="hue-imagen">HUE</label>
-        <input id="hue-imagen" type="range">
+        <input id="hue-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="saturado-imagen">SATURADO</label>
-        <input id="saturado-imagen" type="range">
+        <input id="saturado-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="negativo-imagen">NEGATIVO</label>
-        <input id="negativo-imagen" type="range">
+        <input id="negativo-imagen" type="range" value="0">
 
-        <button  id="btn-reestablecer-filtros">Reestablecer filtros</button>
+        <button class="btn" id="btn-reestablecer-filtros">Reestablecer filtros</button>
 
     </div>
 
