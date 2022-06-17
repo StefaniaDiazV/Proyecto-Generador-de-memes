@@ -25,9 +25,9 @@
 
     <section class="contenedor-memes">
         <div class="editor-memes">
-            <p class="contenedor-texto">TOP TEXT</p>
+            <p id="parrafo-superior" class="contenedor-texto">TOP TEXT</p>
             <div class="contenedor-imagen"></div>
-            <p class="contenedor-texto">BOTTOM TEXT</p>
+            <p id="parrafo-inferior" class="contenedor-texto">BOTTOM TEXT</p>
         </div>
     </section>
 
@@ -35,14 +35,14 @@
         <h2>TEXTO</h2>
 
         <label class="titulos-panel" for="superior">SUPERIOR</label>
-        <input class="input-panel" id="superior" name="superior" type="text">
+        <input class="input-panel" id="superior" name="superior" type="text" value="TOP TEXT">
         <div class="contenedor-checkbox">
             <input id="sin-texto-superior" type="checkbox">
             <label class="texto-checkbox" for="sin-texto-superior">Sin texto superior</label>
         </div>
 
         <label class="titulos-panel" for="inferior">INFERIOR</label>
-        <input class="input-panel"  id="inferior" name="inferior" type="text">
+        <input class="input-panel"  id="inferior" name="inferior" type="text" value="BOTTOM TEXT">
         <div class="contenedor-checkbox">
             <input id="sin-texto-inferior" type="checkbox">
             <label class="texto-checkbox" for="sin-texto-inferior">Sin texto inferior</label>
@@ -55,7 +55,7 @@
             <option>Andale Mono</option>
             <option>Comic Sans MS</option>
             <option>Helvetica</option>
-            <option>Impact</option>
+            <option selected="selected">Impact</option>
             <option>Verdana</option>
             <option>Times New Roman</option>
         </select>

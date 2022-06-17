@@ -73,23 +73,32 @@
 }
 
 .editor-memes{
-    width: 35rem ;
-    background-color: #30343f;
+    height: 35rem ;
+    width: 38rem ;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#parrafo-inferior{
+    bottom: 0;
 }
 
 .contenedor-texto{
     width: 100%;
-    padding: 2.5rem 2rem ;
+    padding: 1rem 2rem ;
     background-color: white;
     text-align: center;
     justify-content: center;
-    
+    font-weight: 700;
+    font-size: 2.8rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+
 .contenedor-imagen{
-    height: 25rem;
     width: 100%;
-    background-color: black;
+    flex-grow: 2;
 
 }
 
@@ -131,7 +140,7 @@
     margin-top: 1rem;
     margin-bottom: 0.3rem;  
     display: block;
-    font-size: 0.9rem;  
+    font-size: 0.9rem; 
 }
 
 .contenedor-checkbox{
