@@ -14,6 +14,12 @@ const tamanoFuente = document.getElementById('tamano-fuente');
 const btnAlinearIzquierda = document.getElementById('btn-alinear-izquierda');
 const btnCentrar = document.getElementById('btn-centrar');
 const btnAlinearDerecha = document.getElementById('btn-alinear-derecha');
+const inputColorLetra = document.getElementById('color-letra');
+const valorColorLetra = document.getElementById('valor-color-letra');
+const inputColorFondo = document.getElementById('color-fondo');
+const valorColorFondo = document.getElementById('valor-color-fondo');
+const fondoTransparente = document.getElementById('fondo-transparente');
+
 
 // ELEMENTOS IMAGEN
 const urlImagen = document.getElementById('url-imagen');
@@ -75,6 +81,7 @@ tipoFuente.addEventListener('change', (event) => {
 tamanoFuente.addEventListener('change', (event) => {
     const tamanoActual = event.target.value;
     parrafoSuperior.style.fontSize = `${tamanoActual}px`;
+    parrafoInferior.style.fontSize = `${tamanoActual}px`;
 });
 
 btnAlinearIzquierda.addEventListener('click', (event) => {
@@ -92,6 +99,37 @@ btnAlinearDerecha.addEventListener('click', (event) => {
     parrafoInferior.style.textAlign = 'right'
 });
 
+const pintarValorColor = (input, valor) => {
+    const valorInput = input.value;
+    valor.innerHTML = valorInput;
+};
+pintarValorColor(inputColorLetra, valorColorLetra);
+pintarValorColor(inputColorFondo, valorColorFondo);
+
+inputColorLetra.addEventListener('input', () => {
+    const valor = inputColorLetra.value;
+    valorColorLetra.innerHTML = valor;
+    parrafoInferior.style.color = valor;
+    parrafoSuperior.style.color = valor;
+});
+
+inputColorFondo.addEventListener('input', () => {
+    const valor = inputColorFondo.value;
+    valorColorFondo.innerHTML = valor;
+    parrafoSuperior.style.backgroundColor = valor;
+    parrafoInferior.style.backgroundColor = valor;
+});
+
+fondoTransparente.addEventListener('change', (event) => {
+    if (event.target.checked) {
+        parrafoSuperior.style.backgroundColor = 'transparent';
+        parrafoInferior.style.backgroundColor = 'transparent';
+    } 
+    else {
+        parrafoSuperior.style.backgroundColor = inputColorFondo.value;
+        parrafoInferior.style.backgroundColor = inputColorFondo.value; 
+    }   
+});
 
 
 

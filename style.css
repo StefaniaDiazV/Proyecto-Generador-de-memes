@@ -105,7 +105,7 @@
 /* ******** Panel de texto********** */
 
 .panel-texto{
-    width: 15rem;
+    width: 15.2rem;
     height: 100vh;
     padding: 2rem 1rem;
     background-color: var(--background-panel);
@@ -177,20 +177,29 @@ input[type='checkbox']{
 
 .contenedor-colores-texto{
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     display: flex;
     justify-content: space-around;
 }
 
 .contenedor-color-texto{
-    width: calc(100% /2 - 0.6rem );
+    width: calc(100% /2 - 0.2rem );
 
 }
 
 .input-color{
-    /* margin-top: 0.3rem; */
     background-color: var(--color-inputs);
     border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding: 0.2rem  0.4rem;
+
+}
+
+.div-color{
+    margin-right: 0.2rem;
 }
 
 input[type='color'] , input[type='color']::-webkit-color-swatch{
@@ -201,7 +210,7 @@ input[type='color'] , input[type='color']::-webkit-color-swatch{
     border: none;
     cursor: pointer;
     background-color: transparent;
-    margin-right: 10px;
+    margin-right: 1px;
 }
 
 .contenedor-btn-contorno{
@@ -226,7 +235,7 @@ input[type='color'] , input[type='color']::-webkit-color-swatch{
 /* ******** Panel de imagen ********** */
 
 .panel-imagen{
-    width: 15rem;
+    width: 15.2rem;
     height: 100vh;
     padding: 2rem 1rem;
     background-color: var(--background-panel) ;
