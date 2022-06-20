@@ -182,7 +182,7 @@ input[type='checkbox']{
     justify-content: space-around;
 }
 
-.contenedor-color-texto{
+.contenedor-color{
     width: calc(100% /2 - 0.2rem );
 
 }
@@ -259,11 +259,6 @@ input[type='color'] , input[type='color']::-webkit-color-swatch{
     display: flex;
     justify-content: space-around;
 }
-
-.control-fondo-imagen{
-    width: calc(100% / 2 - 0.3rem );
-}
-
 
 input[type="range"]{
     -ms-appearance: none;

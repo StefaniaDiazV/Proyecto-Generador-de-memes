@@ -24,7 +24,7 @@
 
 
     <section class="contenedor-memes">
-        <div class="editor-memes">
+        <div class="editor-memes" id="editor">
             <p id="parrafo-superior" class="contenedor-texto">TOP TEXT</p>
             <div class="contenedor-imagen" id="contenedor-imagen"></div>
             <p id="parrafo-inferior" class="contenedor-texto">BOTTOM TEXT</p>
@@ -76,7 +76,7 @@
         </div>
 
         <div class="contenedor-colores-texto">
-            <div class="contenedor-color-texto">
+            <div class="contenedor-color">
                 <label class="titulos-panel" for="color-letra">COLOR</label>
                 <div class="input-color input-panel">
                     <div class="div-color">
@@ -85,7 +85,7 @@
                     <p id="valor-color-letra"></p>
                 </div>
             </div>
-            <div class="contenedor-color-texto" >
+            <div class="contenedor-color" >
                 <label class="titulos-panel" for="color-fondo">FONDO</label>
                 <div class="input-color input-panel">
                     <div class="div-color">
@@ -131,16 +131,20 @@
 
         <label class="titulos-panel" for="color-fondo-imagen">FONDO</label>
         <div class="controles-fondo-imagen">
-            <div class="control-fondo-imagen input-color">
-                <input id="color-fondo-imagen" name="color-fondo-imagen" type="color">
+            <div class="contenedor-color input-color input-panel">
+                <div class="div-color">
+                    <input id="color-fondo-imagen" name="color-fondo-imagen" type="color">
+                </div>
+                <p id="valor-color-imagen"></p>
             </div>
-            <select class="input-panel control-fondo-imagen"  id="color-fondo-imagen" name="color-fondo-imagen">
-                <option>Ninguno</option>
-                <option>Aclarar</option>
-                <option>Oscurecer</option>
-                <option>Diferencia</option>
-                <option>Luminosidad</option>
-                <option>Multiplicar</option>
+
+            <select class="input-panel contenedor-color"  id="mezcla-fondo" name="mezcla-de-fondo">
+                    <option>Ninguno</option>
+                    <option>Aclarar</option>
+                    <option>Oscurecer</option>
+                    <option>Diferencia</option>
+                    <option>Luminosidad</option>
+                    <option>Multiplicar</option>
             </select>
         </div>
 

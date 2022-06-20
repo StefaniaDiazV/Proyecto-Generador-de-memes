@@ -24,7 +24,9 @@ const fondoTransparente = document.getElementById('fondo-transparente');
 // ELEMENTOS IMAGEN
 const urlImagen = document.getElementById('url-imagen');
 const contenedorImagen = document.getElementById('contenedor-imagen');
-
+const inputColorImagen = document.getElementById('color-fondo-imagen');
+const valorColorImagen = document.getElementById('valor-color-imagen');
+const editorMemes = document.getElementById('editor');
 
 // FUNCIONALIDADES MENU PRINCIPAL
 
@@ -105,6 +107,7 @@ const pintarValorColor = (input, valor) => {
 };
 pintarValorColor(inputColorLetra, valorColorLetra);
 pintarValorColor(inputColorFondo, valorColorFondo);
+pintarValorColor(inputColorImagen, valorColorImagen);
 
 inputColorLetra.addEventListener('input', () => {
     const valor = inputColorLetra.value;
@@ -140,4 +143,10 @@ urlImagen.addEventListener('change', (event) => {
     contenedorImagen.style.backgroundImage = `url('${urlActual}')`
     contenedorImagen.style.backgroundRepeat = `no-repeat`
     contenedorImagen.style.backgroundSize = `cover`
+});
+
+inputColorImagen.addEventListener('input', () => {
+    const valor = inputColorImagen.value;
+    valorColorLetra.innerHTML = valor;
+    editorMemes.style.backgroundColor = valor;
 });
