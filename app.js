@@ -12,6 +12,10 @@ const sinTextoInferior = document.getElementById('sin-texto-inferior');
 const tipoFuente = document.getElementById('fuente');
 const tamanoFuente = document.getElementById('tamano-fuente');
 
+// ELEMENTOS IMAGEN
+const urlImagen = document.getElementById('url-imagen');
+const contenedorImagen = document.getElementById('contenedor-imagen');
+
 
 // FUNCIONALIDADES MENU PRINCIPAL
 
@@ -72,10 +76,11 @@ tamanoFuente.addEventListener('change', (event) => {
 
 
 
-
-
-
-
-
-
 // FUNCIONALIDADES PANEL DE IMAGEN
+
+urlImagen.addEventListener('change', (event) => {
+    const urlActual = event.target.value;
+    contenedorImagen.style.backgroundImage = `url('${urlActual}')`
+    contenedorImagen.style.backgroundRepeat = `no-repeat`
+    contenedorImagen.style.backgroundSize = `cover`
+});

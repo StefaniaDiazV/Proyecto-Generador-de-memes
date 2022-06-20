@@ -306,7 +306,9 @@ input[type=range]:focus{
 #btn-reestablecer-filtros:hover{
     background-color: var(--color-hover);
     transition: 0.2s;
+    
 }
+
 
 
 
