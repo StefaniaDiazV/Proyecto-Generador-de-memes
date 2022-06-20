@@ -11,6 +11,9 @@ const sinTextoSuperior = document.getElementById('sin-texto-superior');
 const sinTextoInferior = document.getElementById('sin-texto-inferior');
 const tipoFuente = document.getElementById('fuente');
 const tamanoFuente = document.getElementById('tamano-fuente');
+const btnAlinearIzquierda = document.getElementById('btn-alinear-izquierda');
+const btnCentrar = document.getElementById('btn-centrar');
+const btnAlinearDerecha = document.getElementById('btn-alinear-derecha');
 
 // ELEMENTOS IMAGEN
 const urlImagen = document.getElementById('url-imagen');
@@ -73,6 +76,22 @@ tamanoFuente.addEventListener('change', (event) => {
     const tamanoActual = event.target.value;
     parrafoSuperior.style.fontSize = `${tamanoActual}px`;
 });
+
+btnAlinearIzquierda.addEventListener('click', (event) => {
+    parrafoSuperior.style.textAlign = 'left';
+    parrafoInferior.style.textAlign = 'left'
+}); 
+
+btnCentrar.addEventListener('click', (event) => {
+    parrafoSuperior.style.textAlign = 'center';
+    parrafoInferior.style.textAlign = 'center'
+}); 
+
+btnAlinearDerecha.addEventListener('click', (event) => {
+    parrafoSuperior.style.textAlign = 'right';
+    parrafoInferior.style.textAlign = 'right'
+});
+
 
 
 
