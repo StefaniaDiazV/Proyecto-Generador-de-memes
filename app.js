@@ -33,12 +33,14 @@ const editorMemes = document.getElementById('editor');
 const brilloImagen = document.getElementById('brillo-imagen');
 const opacidadImagen = document.getElementById('opacidad-imagen');
 const contrasteImagen = document.getElementById('contraste-imagen');
-const desenfoqueImage = document.getElementById('desenfoque-imagen');
+const desenfoqueImagen = document.getElementById('desenfoque-imagen');
 const escalaDeGrises = document.getElementById('escala-de-grises-imagen');
 const sepiaImagen = document.getElementById('sepia-imagen');
 const hueImagen = document.getElementById('hue-imagen');
 const saturadoImagen = document.getElementById('saturado-imagen');
 const negativoImagen = document.getElementById('negativo-imagen');
+const btnReestablecerFiltros = document.getElementById('btn-reestablecer-filtros');
+
 
 // FUNCIONALIDADES MENU PRINCIPAL
 
@@ -189,7 +191,7 @@ contrasteImagen.addEventListener('input', (event) => {
     contenedorImagen.style.filter = `contrast(${valorActual}%)`;
 });
 
-desenfoqueImage.addEventListener('input', (event) => {
+desenfoqueImagen.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `blur(${valorActual}px)`;
 });
@@ -217,4 +219,25 @@ saturadoImagen.addEventListener('input', (event) => {
 negativoImagen.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `invert(${valorActual}%)`;
+});
+
+btnReestablecerFiltros.addEventListener('click', (event) => {
+    const brilloInicial = brilloImagen.value = 100;
+    contenedorImagen.style.filter = `brightness(${brilloInicial}%)`;
+    const opacidadInicial = opacidadImagen.value  = 100;
+    contenedorImagen.style.filter = `opacity(${opacidadInicial}%)`;
+    const contrasteInicial = contrasteImagen.value = 100;
+    contenedorImagen.style.filter = `contrast(${contrasteInicial}%)`;
+    const desenfoqueInicial = desenfoqueImagen.value = 0;
+    contenedorImagen.style.filter = `blur(${desenfoqueInicial}px)`;
+    const escalaDeGrisesInicial = escalaDeGrises.value = 0;
+    contenedorImagen.style.filter = `grayscale(${escalaDeGrisesInicial}%)`;
+    const sepiaInicial = sepiaImagen.value = 0;
+    contenedorImagen.style.filter = `sepia(${sepiaInicial}%)`;
+    const hueInicial = hueImagen.value = 0;
+    contenedorImagen.style.filter = `hue-rotate(${hueInicial}deg)`;
+    const saturadoInicial = saturadoImagen.value = 100;
+    contenedorImagen.style.filter = `saturate(${saturadoInicial}%)`;
+    const negativoInicial = negativoImagen.value = 0;
+    contenedorImagen.style.filter = `invert(${negativoInicial}%)`;
 });
