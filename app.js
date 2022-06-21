@@ -20,6 +20,8 @@ const inputColorFondo = document.getElementById('color-fondo');
 const valorColorFondo = document.getElementById('valor-color-fondo');
 const fondoTransparente = document.getElementById('fondo-transparente');
 
+const espaciadoTexto = document.getElementById('espaciado-texto');
+const interlineadoTexto = document.getElementById('interlineado-texto');
 
 // ELEMENTOS IMAGEN
 const urlImagen = document.getElementById('url-imagen');
@@ -134,6 +136,17 @@ fondoTransparente.addEventListener('change', (event) => {
     }   
 });
 
+espaciadoTexto.addEventListener('input', (event) => {
+    const valorActual = espaciadoTexto.value;
+    parrafoSuperior.style.padding = `${valorActual}px`;
+    parrafoInferior.style.padding = `${valorActual}px`;
+});
+
+interlineadoTexto.addEventListener('input', (event) => {
+    const valorActual = interlineadoTexto.value;
+    parrafoSuperior.style.lineHeight = valorActual;
+    parrafoInferior.style.lineHeight = valorActual;
+});
 
 
 // FUNCIONALIDADES PANEL DE IMAGEN

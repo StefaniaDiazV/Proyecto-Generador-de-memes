@@ -86,7 +86,7 @@
 
 .contenedor-texto{
     width: 100%;
-    padding: 1rem 2rem ;
+    padding: 1.4rem 2rem ;
     background-color: white;
     text-align: center;
     justify-content: center;
@@ -98,7 +98,8 @@
 
 .contenedor-imagen{
     width: 100%;
-    flex-grow: 2;
+    flex-grow: 2
+    ;
 
 }
 
