@@ -151,16 +151,16 @@
         <h3 class="titulos-panel">FILTROS</h3>
 
         <label class="titulos-panel" for="brillo-imagen">BRILLO</label>
-        <input id="brillo-imagen" type="range" value="0">
+        <input id="brillo-imagen" type="range" value="100">
 
         <label class="titulos-panel" for="opacidad-imagen">OPACIDAD</label>
-        <input id="opacidad-imagen" type="range" value="0">
+        <input id="opacidad-imagen" type="range" value="100">
 
         <label class="titulos-panel" for="contraste-imagen">CONTRASTE</label>
-        <input id="contraste-imagen" type="range" value="0">
+        <input id="contraste-imagen" type="range" value="100" min="100" max="1000">
 
         <label class="titulos-panel" for="desenfoque-imagen">DESENFOQUE</label>
-        <input id="desenfoque-imagen" type="range" value="0">
+        <input id="desenfoque-imagen" type="range" value="0" max="10">
 
         <label class="titulos-panel" for="escala-de-grises-imagen">ESCALA DE GRISES</label>
         <input id="escala-de-grises-imagen" type="range" value="0">
@@ -169,10 +169,10 @@
         <input id="sepia-imagen" type="range" value="0">
 
         <label class="titulos-panel" for="hue-imagen">HUE</label>
-        <input id="hue-imagen" type="range" value="0">
+        <input id="hue-imagen" type="range" value="0" max="359">
 
         <label class="titulos-panel" for="saturado-imagen">SATURADO</label>
-        <input id="saturado-imagen" type="range" value="0">
+        <input id="saturado-imagen" type="range" value="100" min="100" max="1000">
 
         <label class="titulos-panel" for="negativo-imagen">NEGATIVO</label>
         <input id="negativo-imagen" type="range" value="0">
@@ -187,4 +187,3 @@
 
     <script src="app.js"></script>
 </body>
-</html>

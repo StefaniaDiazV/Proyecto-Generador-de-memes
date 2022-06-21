@@ -30,6 +30,16 @@ const inputColorImagen = document.getElementById('color-fondo-imagen');
 const valorColorImagen = document.getElementById('valor-color-imagen');
 const editorMemes = document.getElementById('editor');
 
+const brilloImagen = document.getElementById('brillo-imagen');
+const opacidadImagen = document.getElementById('opacidad-imagen');
+const contrasteImagen = document.getElementById('contraste-imagen');
+const desenfoqueImage = document.getElementById('desenfoque-imagen');
+const escalaDeGrises = document.getElementById('escala-de-grises-imagen');
+const sepiaImagen = document.getElementById('sepia-imagen');
+const hueImagen = document.getElementById('hue-imagen');
+const saturadoImagen = document.getElementById('saturado-imagen');
+const negativoImagen = document.getElementById('negativo-imagen');
+
 // FUNCIONALIDADES MENU PRINCIPAL
 
 btnTexto.addEventListener('click', () => {
@@ -162,4 +172,49 @@ inputColorImagen.addEventListener('input', () => {
     const valor = inputColorImagen.value;
     valorColorLetra.innerHTML = valor;
     editorMemes.style.backgroundColor = valor;
+});
+
+brilloImagen.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `brightness(${valorActual}%)`;
+});
+
+opacidadImagen.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `opacity(${valorActual}%)`;
+});
+
+contrasteImagen.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `contrast(${valorActual}%)`;
+});
+
+desenfoqueImage.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `blur(${valorActual}px)`;
+});
+
+escalaDeGrises.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `grayscale(${valorActual}%)`;
+});
+
+sepiaImagen.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `sepia(${valorActual}%)`;
+});
+
+hueImagen.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `hue-rotate(${valorActual}deg)`;
+});
+
+saturadoImagen.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `saturate(${valorActual}%)`;
+});
+
+negativoImagen.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    contenedorImagen.style.filter = `invert(${valorActual}%)`;
 });
