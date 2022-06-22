@@ -3,6 +3,7 @@ const btnTexto = document.getElementById('btn-texto');
 const btnModoOscuro = document.getElementById('btn-modo-oscuro');
 const panelTexto = document.getElementById('panel-texto');
 const panelImagen = document.getElementById('panel-imagen');
+const btnCerrarPanelTexto = document.getElementById('btn-cerrar-panel-texto');
 const textoSuperior = document.getElementById('superior');
 const parrafoSuperior = document.getElementById('parrafo-superior');
 const textoInferior = document.getElementById('inferior');
@@ -24,6 +25,7 @@ const espaciadoTexto = document.getElementById('espaciado-texto');
 const interlineadoTexto = document.getElementById('interlineado-texto');
 
 // ELEMENTOS IMAGEN
+const btnCerrarPanelImagen = document.getElementById('btn-cerrar-panel-imagen');
 const urlImagen = document.getElementById('url-imagen');
 const contenedorImagen = document.getElementById('contenedor-imagen');
 const inputColorImagen = document.getElementById('color-fondo-imagen');
@@ -51,7 +53,7 @@ btnTexto.addEventListener('click', () => {
 
 btnImagen.addEventListener('click', () => {
     panelImagen.style.display = 'block'
-    panelTexto.style.display = 'block'
+    panelTexto.style.display = 'none'
 });
 
 const preferenciasTema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -66,6 +68,10 @@ btnModoOscuro.addEventListener('click', () => {
 establecerTema(localStorage.getItem('theme') || preferenciasTema);
 
 // FUNCIONALIDADES PANEL DE TEXTO
+
+btnCerrarPanelTexto.addEventListener('click', () => {
+    panelTexto.style.display = 'none'
+});
 
 const escribirTexto = (input, p) => {
     input.addEventListener('input', (event) => {
@@ -163,6 +169,10 @@ interlineadoTexto.addEventListener('input', (event) => {
 
 // FUNCIONALIDADES PANEL DE IMAGEN
 
+btnCerrarPanelImagen.addEventListener('click', () => {
+    panelImagen.style.display = 'none'
+});
+
 urlImagen.addEventListener('change', (event) => {
     const urlActual = event.target.value;
     contenedorImagen.style.backgroundImage = `url('${urlActual}')`
@@ -172,7 +182,7 @@ urlImagen.addEventListener('change', (event) => {
 
 inputColorImagen.addEventListener('input', () => {
     const valor = inputColorImagen.value;
-    valorColorLetra.innerHTML = valor;
+    valorColorImagen.innerHTML = valor;
     editorMemes.style.backgroundColor = valor;
 });
 
@@ -186,36 +196,37 @@ opacidadImagen.addEventListener('input', (event) => {
     contenedorImagen.style.filter = `opacity(${valorActual}%)`;
 });
 
+    
 contrasteImagen.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `contrast(${valorActual}%)`;
 });
-
+    
 desenfoqueImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `blur(${valorActual}px)`;
+        const valorActual = event.target.value;
+        contenedorImagen.style.filter = `blur(${valorActual}px)`;
 });
 
 escalaDeGrises.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `grayscale(${valorActual}%)`;
 });
-
+    
 sepiaImagen.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `sepia(${valorActual}%)`;
 });
-
+    
 hueImagen.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `hue-rotate(${valorActual}deg)`;
 });
-
+    
 saturadoImagen.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `saturate(${valorActual}%)`;
 });
-
+    
 negativoImagen.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     contenedorImagen.style.filter = `invert(${valorActual}%)`;
