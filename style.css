@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+
 }
 
 [data-theme="light"] {
@@ -52,12 +53,11 @@
     font-size: 0.9rem;
 }
 
-.btn-menu:hover{
-    background-color: var(--color-hover);
-    transition: 0.2s;
+.iconos{
+    margin-right: 0.4rem;
 }
 
-.btn-menu:focus{
+.btn-menu:hover, .btn-menu:focus{
     background-color: var(--color-hover);
     transition: 0.2s;
 }
@@ -70,11 +70,10 @@
     justify-content: center;
     padding: 0rem 1rem;
     flex-grow: 1;
-
 }
 
 .editor-memes{
-    height: 35rem ;
+    height: 36rem ;
     width: 38rem ;
     background-color: black;
     display: flex;
@@ -102,9 +101,9 @@
 
 }
 
-/* ******** Panel de texto********** */
+/* ESTILOS GENERALES PANEL */
 
-.panel-texto{
+.panel-texto, .panel-imagen{
     width: 15.2rem;
     height: 100vh;
     padding: 2rem 0.9rem;
@@ -117,6 +116,11 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+}
+
+.panel-texto h2, .panel-imagen h2{
+    text-align: center;
+    font-weight: 800;
 }
 
 a:link, a:visited, a:active {
@@ -147,17 +151,55 @@ a:link, a:visited, a:active {
     display: block;
     font-size: 0.8rem;
 }
-
-.panel-texto h2{
-    text-align: center;
+.input-panel:hover, .input-panel:focus, .btn-contorno:hover, .btn-contorno:focus, #btn-reestablecer-filtros:hover, #btn-reestablecer-filtros:focus{
+    background-color: var(--color-hover);
+    transition: 0.4s;
 }
 
 .titulos-panel{
     margin-top: 1rem;
     margin-bottom: 0.3rem;  
     display: block;
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
+    font-weight: bold;
 }
+
+.contenedor-color{
+    width: calc(100% /2 - 0.2rem );
+
+}
+
+.input-color{
+    background-color: var(--color-inputs);
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.2rem  0.4rem;
+    font-size: 0.7rem;
+}
+
+.div-color{
+    margin-right: 0.3rem;
+}
+
+input[type='color'] , input[type='color']::-webkit-color-swatch{
+    width: 1.1rem;
+    height: 1.1rem;
+    min-width: 1.1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 1px;
+}
+
+.valor-color{
+    font-size: 0.9rem;
+}
+
+/* ******** PANEL DE TEXTO********** */
 
 .contenedor-checkbox{
     display: flex;
@@ -166,8 +208,7 @@ a:link, a:visited, a:active {
 }
 
 input[type='checkbox']{
-    margin: 0 0.2rem 0 0;
-    
+    margin: 0 0.2rem 0 0;   
 }
 
 .texto-checkbox{
@@ -197,38 +238,6 @@ input[type='checkbox']{
     display: flex;
     justify-content: space-around;
 }
-
-.contenedor-color{
-    width: calc(100% /2 - 0.2rem );
-
-}
-
-.input-color{
-    background-color: var(--color-inputs);
-    border: none;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0.2rem  0.4rem;
-    font-size: 0.7rem;
-
-}
-
-.div-color{
-    margin-right: 0.2rem;
-}
-
-input[type='color'] , input[type='color']::-webkit-color-swatch{
-    width: 1.1rem;
-    height: 1.1rem;
-    min-width: 1.1rem;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    margin-right: 1px;
-}
-
 .contenedor-btn-contorno{
     display: flex;
     justify-content: space-between;
@@ -241,39 +250,21 @@ input[type='color'] , input[type='color']::-webkit-color-swatch{
     border-radius: 0.3rem;
     padding: 0.5rem;
     font-size: 0.9rem;
+    margin-right: 0.5rem;
 }
 
-.btn-contorno:hover{
-    background-color: var(--color-hover);
-    transition: 0.2s;
-}
-
-/* ******** Panel de imagen ********** */
-
-.panel-imagen{
-    width: 15.2rem;
-    height: 100vh;
-    padding: 2rem 0.9rem;
-    background-color: var(--background-panel) ;
-    color: var(--color);
-    position: fixed;
-    z-index: 3;
-    left: 100;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    display: block;
-}
-
-.panel-imagen h2{
-    text-align: center;
-}
+/* ******** PANEL DE IMAGEN  ********** */
 
 .controles-fondo-imagen{
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+.subtitulos-filtros{
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    display: block;
 }
 
 input[type="range"]{
@@ -314,81 +305,66 @@ input[type=range]:focus{
 }
 
 #btn-reestablecer-filtros{
-    margin-top: 1rem;
+    width: 100%;
+    margin-top: 2rem;
     color: var(--color);
     border: var(--background-menu) 1px;
     background-color: var(--background-menu);
     border-radius: 0.3rem;
     padding: 0.5rem;
     font-size: 0.9rem;
-}
-
-#btn-reestablecer-filtros:hover{
-    background-color: var(--color-hover);
-    transition: 0.2s;   
+    display: block;
 }
 
 
-
-
-@media (min-width:820px) and (max-width:1024px){
-    .panel-imagen{
+@media (min-width:720px) and (max-width:1150px){
+    .panel-imagen, .panel-texto{
         display: none;
     }
-    .panel-texto{
-        display: none;
-    }
-
-}
-@media (min-width:480px) and (max-width:819px){
-    .panel-imagen{
-        display: none;
-    }
-    .panel-texto{
-        display: none;
-    }
-
-    .contenedor-memes{
-        padding: 0 2rem ;
-    }
-
-    .editor-memes{
-        width: 90%;
-    }
-}
-
-@media (max-width:479px){
-    
-    *{
-        font-size: 12px;
-    }
-    
-    .panel-imagen{
-        display: none;
-        width: 100%;
-    }
-    .panel-texto{
-        display: none;
-        width: 100%;
-    }
-
-    .titulos-panel{
-        font-size: 1.1rem;
-    }
-
     .btn-cerrar{
         display: block;
     }
-
-    .contenedor-memes{
-        padding: 0 0.4rem ;
+}
+@media (min-width:520px) and (max-width:719px){
+    .panel-imagen, .panel-texto{
+        display: none;
     }
-
+    .contenedor-memes{
+        padding: 0 1rem ;
+    }
+    .btn-cerrar{
+        display: block;
+    }
     .editor-memes{
         width: 90%;
+    }
+}
+
+@media (max-width:519px){
+    *{
+        font-size: 12px;
+    }
+    .panel-imagen, .panel-texto{
+        display: none;
+        width: 100%;
+    }
+    .titulos-panel{
+        font-size: 1.1rem;
+    }
+    .btn-cerrar{
+        display: block;
+    }
+    .contenedor-btn-contorno{
+        justify-content: flex-start;
+    }
+    .contenedor-memes{
+        padding: 0 0.5rem ;
+    }
+    .editor-memes{
+        width: 90%;
+        max-width: 380px;
         height: calc(90% / 2 - 1%) ;
     }
-
     .contenedor-texto{
         padding: 0.3rem 2rem;
         font-size: 2rem;

@@ -16,9 +16,9 @@
     <header class="menu-principal">
         <h1 class="titulo">Generador de memes</h1>
         <div class="contenedor-botones">
-            <button id="btn-imagen" class="btn-menu">Imagen</button>
-            <button id="btn-texto" class="btn-menu">Texto</button>
-            <button id="btn-modo-oscuro" class="btn-menu">Modo oscuro</button>
+            <button id="btn-imagen" class="btn-menu"><i class="fa-solid fa-image iconos"></i>Imagen</button>
+            <button id="btn-texto" class="btn-menu"><i class="fa-solid fa-font iconos"></i>Texto</button>
+            <button id="btn-modo-oscuro" class="btn-menu"> <i class="fa-solid fa-lightbulb iconos"></i>Modo oscuro</button>
         </div>
     </header>
 
@@ -86,7 +86,7 @@
                     <div class="div-color">
                         <input id="color-letra" name="color-letra" type="color">
                     </div>
-                    <p id="valor-color-letra"></p>
+                    <p class="valor-color" id="valor-color-letra"></p>
                 </div>
             </div>
             <div class="contenedor-color" >
@@ -95,7 +95,7 @@
                     <div class="div-color">
                         <input  id="color-fondo" name="color-fondo" type="color" value="#FFFFFF">
                     </div>
-                    <p class="titulos" id="valor-color-fondo"></p>
+                    <p class="valor-color"  id="valor-color-fondo"></p>
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
                 <div class="div-color">
                     <input id="color-fondo-imagen" name="color-fondo-imagen" type="color">
                 </div>
-                <p id="valor-color-imagen"></p>
+                <p class="valor-color"  id="valor-color-imagen"></p>
             </div>
             <select class="input-panel contenedor-color"  id="mezcla-fondo" name="mezcla-de-fondo">
                     <option>Ninguno</option>
@@ -157,31 +157,31 @@
 
         <h3 class="titulos-panel">FILTROS</h3>
 
-        <label class="titulos-panel" for="brillo-imagen">BRILLO</label>
+        <label class="subtitulos-filtros" for="brillo-imagen">BRILLO</label>
         <input id="brillo-imagen" type="range" value="100">
 
-        <label class="titulos-panel" for="opacidad-imagen">OPACIDAD</label>
+        <label class="subtitulos-filtros"for="opacidad-imagen">OPACIDAD</label>
         <input id="opacidad-imagen" type="range" value="100">
 
-        <label class="titulos-panel" for="contraste-imagen">CONTRASTE</label>
+        <label class="subtitulos-filtros" for="contraste-imagen">CONTRASTE</label>
         <input id="contraste-imagen" type="range" value="100" min="100" max="1000">
 
-        <label class="titulos-panel" for="desenfoque-imagen">DESENFOQUE</label>
+        <label class="subtitulos-filtros" for="desenfoque-imagen">DESENFOQUE</label>
         <input id="desenfoque-imagen" type="range" value="0" max="10">
 
-        <label class="titulos-panel" for="escala-de-grises-imagen">ESCALA DE GRISES</label>
+        <label class="subtitulos-filtros" for="escala-de-grises-imagen">ESCALA DE GRISES</label>
         <input id="escala-de-grises-imagen" type="range" value="0">
 
-        <label class="titulos-panel" for="sepia-imagen">SEPIA</label>
+        <label class="subtitulos-filtros" for="sepia-imagen">SEPIA</label>
         <input id="sepia-imagen" type="range" value="0">
 
-        <label class="titulos-panel" for="hue-imagen">HUE</label>
+        <label class="subtitulos-filtros" for="hue-imagen">HUE</label>
         <input id="hue-imagen" type="range" value="0" max="359">
 
-        <label class="titulos-panel" for="saturado-imagen">SATURADO</label>
+        <label class="subtitulos-filtros" for="saturado-imagen">SATURADO</label>
         <input id="saturado-imagen" type="range" value="100" min="100" max="1000">
 
-        <label class="titulos-panel" for="negativo-imagen">NEGATIVO</label>
+        <label class="subtitulos-filtros" for="negativo-imagen">NEGATIVO</label>
         <input id="negativo-imagen" type="range" value="0">
 
         <button class="btn" id="btn-reestablecer-filtros">Reestablecer filtros</button>
