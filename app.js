@@ -20,7 +20,9 @@ const valorColorLetra = document.getElementById('valor-color-letra');
 const inputColorFondo = document.getElementById('color-fondo');
 const valorColorFondo = document.getElementById('valor-color-fondo');
 const fondoTransparente = document.getElementById('fondo-transparente');
-
+const btnContornoNinguno = document.getElementById('contorno-ninguno');
+const btnContornoClaro = document.getElementById('contorno-claro');
+const btnContornoOscuro = document.getElementById('contorno-oscuro')
 const espaciadoTexto = document.getElementById('espaciado-texto');
 const interlineadoTexto = document.getElementById('interlineado-texto');
 
@@ -152,6 +154,19 @@ fondoTransparente.addEventListener('change', (event) => {
         parrafoSuperior.style.backgroundColor = inputColorFondo.value;
         parrafoInferior.style.backgroundColor = inputColorFondo.value; 
     }   
+});
+
+btnContornoNinguno.addEventListener('click', (event) => {
+    parrafoSuperior.style.textShadow = '';
+    parrafoInferior.style.textShadow = '';
+});
+btnContornoClaro.addEventListener('click', (event) => {
+    parrafoSuperior.style.textShadow = '-2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff';
+    parrafoInferior.style.textShadow = '-2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff';
+});
+btnContornoOscuro.addEventListener('click', (event) => {
+    parrafoSuperior.style.textShadow = '-2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000';
+    parrafoInferior.style.textShadow = '-2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000';
 });
 
 espaciadoTexto.addEventListener('input', (event) => {
