@@ -13,15 +13,14 @@
 </head>
 <body>
 
-    <header class="menu-principal">
-        <h1 class="titulo">Generador de memes</h1>
+    <header tabindex="1" class="menu-principal">
+        <h1 class="titulo" tabindex="2">Generador de memes</h1>
         <div class="contenedor-botones">
-            <button id="btn-imagen" class="btn-menu"><i class="fa-solid fa-image iconos"></i>Imagen</button>
-            <button id="btn-texto" class="btn-menu"><i class="fa-solid fa-font iconos"></i>Texto</button>
-            <button id="btn-modo-oscuro" class="btn-menu"> <i class="fa-solid fa-lightbulb iconos"></i>Modo oscuro</button>
+            <button id="btn-imagen" class="btn-menu"  aria-label="Abrir panel de imagen" role="button" tabindex="3" ><i class="fa-solid fa-image iconos"></i>Imagen</button>
+            <button  id="btn-texto" class="btn-menu" aria-label="Abrir panel de texto" role="button" tabindex="4"><i class="fa-solid fa-font iconos"></i>Texto</button>
+            <button  id="btn-modo-oscuro" class="btn-menu" aria-label="Cambiar a modo oscuro" role="button" tabindex="5"> <i class="fa-solid fa-lightbulb iconos"></i>Modo oscuro</button>
         </div>
     </header>
-
 
     <section class="contenedor-memes">
         <div class="editor-memes" id="editor">
@@ -31,28 +30,28 @@
         </div>
     </section>
 
-    <div id="panel-texto" class="panel-texto ocultar">
+    <aside id="panel-texto" class="panel-texto ocultar">
         <div id="btn-cerrar-panel-texto" class="btn-cerrar">
-            <a href="#">X</a>
+            <a href="#" tabindex="5" aria-label="Cerrar panel">X</a>
         </div>
 
-        <h2>TEXTO</h2>
+        <h2 aria-label="Panel de texto" tabindex="6">TEXTO</h2>
 
-        <label class="titulos-panel" for="superior">SUPERIOR</label>
-        <input class="input-panel" id="superior" name="superior" type="text" value="TOP TEXT">
+        <label class="titulos-panel" for="superior" >SUPERIOR</label>
+        <input class="input-panel" id="superior" name="superior" type="text" value="TOP TEXT" tabindex="7" >
         <div class="contenedor-checkbox">
-            <input id="sin-texto-superior" type="checkbox">
+            <input id="sin-texto-superior" type="checkbox" tabindex="8">
             <label class="texto-checkbox" for="sin-texto-superior">Sin texto superior</label>
         </div>
 
         <label class="titulos-panel" for="inferior">INFERIOR</label>
-        <input class="input-panel"  id="inferior" name="inferior" type="text" value="BOTTOM TEXT">
+        <input class="input-panel"  id="inferior" name="inferior" type="text" value="BOTTOM TEXT" tabindex="9">
         <div class="contenedor-checkbox">
-            <input id="sin-texto-inferior" type="checkbox">
+            <input id="sin-texto-inferior" type="checkbox" tabindex="10">
             <label class="texto-checkbox" for="sin-texto-inferior">Sin texto inferior</label>
         </div>
         <label class="titulos-panel" for="fuente">FUENTE</label>
-        <select class="input-panel" id="fuente" name="fuente">
+        <select class="input-panel" id="fuente" name="fuente"  aria-label="Familia de fuente" tabindex="11">
             <option>Arial</option>
             <option>Arial Black</option>
             <option>American Typewriter</option>
@@ -66,15 +65,15 @@
 
         <div class="controles-fuente">
             <label for="tamano-fuente"></label>
-            <input class="input-panel" type="number" id="tamano-fuente" name="tamano-fuente" min="12" value="40">
+            <input class="input-panel" type="number" id="tamano-fuente" name="tamano-fuente" min="12" value="40" aria-label="Tamaño de fuente" tabindex="12">
 
-            <button class="btns-alineado input-panel" id="btn-alinear-izquierda">
+            <button class="btns-alineado input-panel" id="btn-alinear-izquierda" aria-label="Alinear texto a la izquierda" tabindex="13">
                 <i class="fa-solid fa-align-left"></i>
             </button>
-            <button class="btns-alineado input-panel" id="btn-centrar">
+            <button class="btns-alineado input-panel" id="btn-centrar" aria-label="Centrar texto" tabindex="14">
                 <i class="fa-solid fa-align-center"></i>
             </button>
-            <button class="btns-alineado input-panel" id="btn-alinear-derecha">
+            <button class="btns-alineado input-panel" id="btn-alinear-derecha" aria-label="Alinear texto a la derecha" tabindex="15">
                 <i class="fa-solid fa-align-right"></i>
             </button>
         </div>
@@ -82,18 +81,18 @@
         <div class="contenedor-colores-texto">
             <div class="contenedor-color">
                 <label class="titulos-panel" for="color-letra">COLOR</label>
-                <div class="input-color input-panel">
+                <div class="input-color input-panel"  aria-label="color de texto" aria-hidden="false" tabindex="16">
                     <div class="div-color">
-                        <input id="color-letra" name="color-letra" type="color">
+                        <input aria-hidden="true" id="color-letra" name="color-letra" type="color" value="#000000" >
                     </div>
                     <p class="valor-color" id="valor-color-letra"></p>
                 </div>
             </div>
             <div class="contenedor-color" >
                 <label class="titulos-panel" for="color-fondo">FONDO</label>
-                <div class="input-color input-panel">
+                <div class="input-color input-panel" aria-label="Color de fondo de texto" aria-hidden="false" tabindex="17">
                     <div class="div-color">
-                        <input  id="color-fondo" name="color-fondo" type="color" value="#FFFFFF">
+                        <input aria-hidden="true" id="color-fondo" name="color-fondo" type="color" value="#FFFFFF" >
                     </div>
                     <p class="valor-color"  id="valor-color-fondo"></p>
                 </div>
@@ -101,20 +100,20 @@
         </div>
 
         <div class="contenedor-checkbox">
-            <input id="fondo-transparente" type="checkbox">
+            <input id="fondo-transparente" type="checkbox" tabindex="18">
             <label class="texto-checkbox" for="fondo-transparente">Fondo transparente</label>
         </div>
         <h3 class="titulos-panel">CONTORNO</h3>
         <div class="contenedor-btn-contorno">
-            <button class="btn-contorno" id="contorno-ninguno">Ninguno</button>
-            <button class="btn-contorno" id="contorno-claro">Claro</button>
-            <button class="btn-contorno" id="contorno-oscuro">Oscuro</button>
+            <button class="btn-contorno" id="contorno-ninguno" aria-label="Contorno ninguno" tabindex="19">Ninguno</button>
+            <button class="btn-contorno" id="contorno-claro" aria-label="Contorno claro" tabindex="20">Claro</button>
+            <button class="btn-contorno" id="contorno-oscuro" aria-label="Contorno oscuro" tabindex="21">Oscuro</button>
         </div>
         <label class="titulos-panel" for="espaciado-texto">ESPACIADO</label>
-        <input class="input-panel" type="number" id="espaciado-texto" name="espaciado-texto" min="10" max="50" value="21">
+        <input class="input-panel" type="number" id="espaciado-texto" name="espaciado-texto" min="10" max="50" value="21" tabindex="22">
 
         <label class="titulos-panel" for="interlineado-texto">INTERLINEADO</label>
-        <select class="input-panel" id="interlineado-texto" name="interlineado-texto">
+        <select class="input-panel" id="interlineado-texto" name="interlineado-texto" tabindex="23">
             <option>0.8</option>
             <option>1</option>
             <option>1.2</option>
@@ -123,29 +122,28 @@
             <option>2.5</option>
         </select>
 
-    </div>
+    </aside>
 
 
-    <div id="panel-imagen" class="panel-imagen  ocultar">
+    <aside id="panel-imagen" class="panel-imagen  ocultar">
         <div id="btn-cerrar-panel-imagen" class="btn-cerrar">
-            <a href="#">X</a>
+            <a href="#" tabindex="5" aria-label="Cerrar panel">X</a>
         </div>
 
-        <h2>IMAGEN</h2>
+        <h2 aria-label="Panel de imagen" tabindex="6">IMAGEN </h2>
 
         <label class="titulos-panel" for="url-imagen">URL</label>
-        <input class="input-panel" id="url-imagen" name="url-imagen" type="text">
-
+        <input class="input-panel" id="url-imagen" name="url-imagen" type="text" tabindex="7">
 
         <label class="titulos-panel" for="color-fondo-imagen">FONDO</label>
         <div class="controles-fondo-imagen">
-            <div class="contenedor-color input-color input-panel">
+            <div class="contenedor-color input-color input-panel" aria-hidden="false" aria-label="Color de fondo de imagen" tabindex="8">
                 <div class="div-color">
-                    <input id="color-fondo-imagen" name="color-fondo-imagen" type="color">
+                    <input aria-hidden="true" id="color-fondo-imagen" name="color-fondo-imagen" type="color">
                 </div>
                 <p class="valor-color"  id="valor-color-imagen"></p>
             </div>
-            <select class="input-panel contenedor-color"  id="mezcla-fondo" name="mezcla-de-fondo">
+            <select class="input-panel contenedor-color"  id="mezcla-fondo" name="mezcla-de-fondo" aria-label="Modo de mezcla de fondo" tabindex="9">
                     <option>Ninguno</option>
                     <option>Aclarar</option>
                     <option>Oscurecer</option>
@@ -155,42 +153,38 @@
             </select>
         </div>
 
-        <h3 class="titulos-panel">FILTROS</h3>
+        <h3 class="titulos-panel" aria-label="Filtros de imagen" tabindex="10">FILTROS</h3>
 
         <label class="subtitulos-filtros" for="brillo-imagen">BRILLO</label>
-        <input id="brillo-imagen" type="range" value="100">
+        <input id="brillo-imagen" type="range" value="100" tabindex="11">
 
         <label class="subtitulos-filtros"for="opacidad-imagen">OPACIDAD</label>
-        <input id="opacidad-imagen" type="range" value="100">
+        <input id="opacidad-imagen" type="range" value="100" tabindex="12">
 
         <label class="subtitulos-filtros" for="contraste-imagen">CONTRASTE</label>
-        <input id="contraste-imagen" type="range" value="100" min="100" max="1000">
+        <input id="contraste-imagen" type="range" value="100" min="100" max="1000" tabindex="13">
 
         <label class="subtitulos-filtros" for="desenfoque-imagen">DESENFOQUE</label>
-        <input id="desenfoque-imagen" type="range" value="0" max="10">
+        <input id="desenfoque-imagen" type="range" value="0" max="10" tabindex="14">
 
         <label class="subtitulos-filtros" for="escala-de-grises-imagen">ESCALA DE GRISES</label>
-        <input id="escala-de-grises-imagen" type="range" value="0">
+        <input id="escala-de-grises-imagen" type="range" value="0" tabindex="15">
 
         <label class="subtitulos-filtros" for="sepia-imagen">SEPIA</label>
-        <input id="sepia-imagen" type="range" value="0">
+        <input id="sepia-imagen" type="range" value="0" tabindex="16">
 
         <label class="subtitulos-filtros" for="hue-imagen">HUE</label>
-        <input id="hue-imagen" type="range" value="0" max="359">
+        <input id="hue-imagen" type="range" value="0" max="359" tabindex="17">
 
         <label class="subtitulos-filtros" for="saturado-imagen">SATURADO</label>
-        <input id="saturado-imagen" type="range" value="100" min="100" max="1000">
+        <input id="saturado-imagen" type="range" value="100" min="100" max="1000" tabindex="18">
 
         <label class="subtitulos-filtros" for="negativo-imagen">NEGATIVO</label>
-        <input id="negativo-imagen" type="range" value="0">
+        <input id="negativo-imagen" type="range" value="0" tabindex="19">
 
-        <button class="btn" id="btn-reestablecer-filtros">Reestablecer filtros</button>
+        <button class="btn" id="btn-reestablecer-filtros" tabindex="20">Reestablecer filtros</button>
 
-    </div>
-
-
-
-
+    </aside>
 
     <script src="app.js"></script>
 </body>
