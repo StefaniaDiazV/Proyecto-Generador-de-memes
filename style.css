@@ -6,6 +6,13 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body{
+    height: 100vh;
+    background-color: var(--background-contenedor-memes);
+    display: flex;
+    flex-direction: column;
+}
+
 [data-theme="light"] {
     --background-menu: #e0e0e0;
     --background-contenedor-memes: #eeeeee;
@@ -64,12 +71,12 @@
 }
 
 .contenedor-memes{
-    height: 95vh;
     background-color:var(--background-contenedor-memes);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0rem 1rem;
+    padding: 1rem 1rem;
     flex-grow: 1;
 }
 
@@ -99,7 +106,23 @@
 .contenedor-imagen{
     width: 100%;
     flex-grow: 2;
+}
 
+#btn-descargar-meme{
+    margin: 3rem 0 0 0;
+    padding: 0.5rem;
+    color:white;
+    border: green 1px;
+    background-color: green;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+}
+#btn-descargar-meme:hover{
+    cursor: pointer;
+}
+.fa-download{
+    color: white;
+    margin-right: 0.5rem;
 }
 
 /* ESTILOS GENERALES PANEL */
@@ -361,11 +384,11 @@ input[type=range]:focus{
         justify-content: flex-start;
     }
     .contenedor-memes{
-        padding: 0 0.5rem ;
+        padding: 1rem 0.5rem ;
     }
     .editor-memes{
         width: 90%;
-        max-width: 380px;
+        max-width: 300px;
         height: calc(90% / 2 - 1%) ;
     }
     .contenedor-texto{

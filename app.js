@@ -1,6 +1,7 @@
 const btnImagen = document.getElementById('btn-imagen');
 const btnTexto = document.getElementById('btn-texto');
 const btnModoOscuro = document.getElementById('btn-modo-oscuro');
+const btnDescargarMeme = document.getElementById('btn-descargar-meme')
 const panelTexto = document.getElementById('panel-texto');
 const panelImagen = document.getElementById('panel-imagen');
 const btnCerrarPanelTexto = document.getElementById('btn-cerrar-panel-texto');
@@ -68,6 +69,12 @@ btnModoOscuro.addEventListener('click', () => {
     establecerTema(cambiarTema)
 });
 establecerTema(localStorage.getItem('theme') || preferenciasTema);
+
+btnDescargarMeme.addEventListener('click', (event) => {
+    domtoimage.toBlob(editorMemes).then(function (blob) {
+        window.saveAs(blob, 'mi-meme.png')
+    });
+});
 
 // FUNCIONALIDADES PANEL DE TEXTO
 
