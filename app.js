@@ -33,7 +33,7 @@ const contenedorImagen = document.getElementById('contenedor-imagen');
 const inputColorImagen = document.getElementById('color-fondo-imagen');
 const valorColorImagen = document.getElementById('valor-color-imagen');
 const editorMemes = document.getElementById('editor');
-
+const modoDeMezclaFondo = document.getElementById('mezcla-fondo');
 const brilloImagen = document.getElementById('brillo-imagen');
 const opacidadImagen = document.getElementById('opacidad-imagen');
 const contrasteImagen = document.getElementById('contraste-imagen');
@@ -149,7 +149,7 @@ fondoTransparente.addEventListener('change', (event) => {
     if (event.target.checked) {
         parrafoSuperior.style.backgroundColor = 'transparent';
         parrafoInferior.style.backgroundColor = 'transparent';
-    } 
+    }
     else {
         parrafoSuperior.style.backgroundColor = inputColorFondo.value;
         parrafoInferior.style.backgroundColor = inputColorFondo.value; 
@@ -181,7 +181,6 @@ interlineadoTexto.addEventListener('input', (event) => {
     parrafoInferior.style.lineHeight = valorActual;
 });
 
-
 // FUNCIONALIDADES PANEL DE IMAGEN
 
 btnCerrarPanelImagen.addEventListener('click', () => {
@@ -199,6 +198,23 @@ inputColorImagen.addEventListener('input', () => {
     const valor = inputColorImagen.value;
     valorColorImagen.innerHTML = valor;
     editorMemes.style.backgroundColor = valor;
+});
+
+modoDeMezclaFondo.addEventListener('input', (event) => {
+    const valorActual = modoDeMezclaFondo.value;
+    if(valorActual === 'Ninguno'){
+        contenedorImagen.style.mixBlendMode = '';
+    }else if(valorActual === 'Aclarar'){
+        contenedorImagen.style.mixBlendMode = 'lighten';
+    }else if(valorActual === 'Oscurecer'){
+        contenedorImagen.style.mixBlendMode = 'darken';
+    }else if(valorActual === 'Diferencia'){
+        contenedorImagen.style.mixBlendMode = 'difference';
+    }else if(valorActual === 'Luminosidad'){
+        contenedorImagen.style.mixBlendMode = 'luminosity';
+    }else if(valorActual === 'Multiplicar'){
+        contenedorImagen.style.mixBlendMode = 'multiply';
+    } 
 });
 
 brilloImagen.addEventListener('input', (event) => {
