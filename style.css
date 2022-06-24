@@ -391,6 +391,9 @@ input[type=range]:focus{
         max-width: 300px;
         height: calc(90% / 2 - 1%) ;
     }
+    .contenedor-imagen{
+        height: 100%;
+    }
     .contenedor-texto{
         padding: 0.3rem 2rem;
         font-size: 2rem;
