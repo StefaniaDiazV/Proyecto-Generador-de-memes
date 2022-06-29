@@ -157,31 +157,31 @@
         <h3 class="titulos-panel" aria-label="Filtros de imagen" tabindex="10">FILTROS</h3>
 
         <label class="subtitulos-filtros" for="brillo-imagen">BRILLO</label>
-        <input id="brillo-imagen" type="range" value="100" tabindex="11">
+        <input id="brillo-imagen" type="range" min="0" max="1" step="0.1" value="1" tabindex="11">
 
         <label class="subtitulos-filtros"for="opacidad-imagen">OPACIDAD</label>
-        <input id="opacidad-imagen" type="range" value="100" tabindex="12">
+        <input id="opacidad-imagen" type="range" min="0" max="1" step="0.1" value="1" tabindex="12">
 
         <label class="subtitulos-filtros" for="contraste-imagen">CONTRASTE</label>
-        <input id="contraste-imagen" type="range" value="100" min="100" max="1000" tabindex="13">
+        <input id="contraste-imagen" type="range" value="100" min="100" max="1000" step="1" tabindex="13">
 
         <label class="subtitulos-filtros" for="desenfoque-imagen">DESENFOQUE</label>
-        <input id="desenfoque-imagen" type="range" value="0" max="10" tabindex="14">
+        <input id="desenfoque-imagen" type="range" value="0" min="0" max="10" step="0.1" tabindex="14">
 
         <label class="subtitulos-filtros" for="escala-de-grises-imagen">ESCALA DE GRISES</label>
-        <input id="escala-de-grises-imagen" type="range" value="0" tabindex="15">
+        <input id="escala-de-grises-imagen" type="range" value="0"  min="0" max="100" step="1" tabindex="15">
 
         <label class="subtitulos-filtros" for="sepia-imagen">SEPIA</label>
-        <input id="sepia-imagen" type="range" value="0" tabindex="16">
+        <input id="sepia-imagen" type="range" value="0" min="0" max="100" step="1" tabindex="16">
 
         <label class="subtitulos-filtros" for="hue-imagen">HUE</label>
-        <input id="hue-imagen" type="range" value="0" max="359" tabindex="17">
+        <input id="hue-imagen" type="range" value="0" min="0" max="359" step="1" tabindex="17">
 
         <label class="subtitulos-filtros" for="saturado-imagen">SATURADO</label>
-        <input id="saturado-imagen" type="range" value="100" min="100" max="1000" tabindex="18">
+        <input id="saturado-imagen" type="range" value="100" min="100" max="1000" step="10" tabindex="18">
 
         <label class="subtitulos-filtros" for="negativo-imagen">NEGATIVO</label>
-        <input id="negativo-imagen" type="range" value="0" tabindex="19">
+        <input id="negativo-imagen" type="range" value="0" min="0" max="1" step="0.1" tabindex="19">
 
         <button class="btn" id="btn-reestablecer-filtros" tabindex="20">Reestablecer filtros</button>
 

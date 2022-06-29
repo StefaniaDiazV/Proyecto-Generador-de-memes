@@ -229,57 +229,35 @@ modoDeMezclaFondo.addEventListener('input', (event) => {
     } 
 });
 
-brilloImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `brightness(${valorActual}%)`;
-});
+const valorFiltros = () => {
+    const valorBrillo = brilloImagen.value;
+    const valorOpacidad = opacidadImagen.value;
+    const valorContraste = contrasteImagen.value;
+    const valorDesenfoque = desenfoqueImagen.value;
+    const valorGrises = escalaDeGrises.value;
+    const valorSepia = sepiaImagen.value;
+    const valorHue = hueImagen.value;
+    const valorSaturado = saturadoImagen.value;
+    const valorNegativo = negativoImagen.value;
 
-opacidadImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `opacity(${valorActual}%)`;
-});
+    contenedorImagen.style.filter = `brightness(${valorBrillo}) opacity(${valorOpacidad}) contrast(${valorContraste}%) blur(${valorDesenfoque}px) grayscale(${valorGrises}%) sepia(${valorSepia}%) hue-rotate(${valorHue}deg) saturate(${valorSaturado}%) invert(${valorNegativo})`
+};
 
-    
-contrasteImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `contrast(${valorActual}%)`;
-});
-    
-desenfoqueImagen.addEventListener('input', (event) => {
-        const valorActual = event.target.value;
-        contenedorImagen.style.filter = `blur(${valorActual}px)`;
-});
-
-escalaDeGrises.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `grayscale(${valorActual}%)`;
-});
-    
-sepiaImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `sepia(${valorActual}%)`;
-});
-    
-hueImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `hue-rotate(${valorActual}deg)`;
-});
-    
-saturadoImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `saturate(${valorActual}%)`;
-});
-    
-negativoImagen.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    contenedorImagen.style.filter = `invert(${valorActual}%)`;
-});
+brilloImagen.addEventListener('input', valorFiltros);
+opacidadImagen.addEventListener('input', valorFiltros);
+contrasteImagen.addEventListener('input', valorFiltros);
+desenfoqueImagen.addEventListener('input', valorFiltros);
+escalaDeGrises.addEventListener('input', valorFiltros); 
+sepiaImagen.addEventListener('input', valorFiltros); 
+hueImagen.addEventListener('input', valorFiltros); 
+saturadoImagen.addEventListener('input', valorFiltros); 
+negativoImagen.addEventListener('input', valorFiltros);
 
 btnReestablecerFiltros.addEventListener('click', (event) => {
-    const brilloInicial = brilloImagen.value = 100;
-    contenedorImagen.style.filter = `brightness(${brilloInicial}%)`;
-    const opacidadInicial = opacidadImagen.value  = 100;
-    contenedorImagen.style.filter = `opacity(${opacidadInicial}%)`;
+    const brilloInicial = brilloImagen.value = 1;
+    contenedorImagen.style.filter = `brightness(${brilloInicial})`;
+    const opacidadInicial = opacidadImagen.value  = 1;
+    contenedorImagen.style.filter = `opacity(${opacidadInicial})`;
     const contrasteInicial = contrasteImagen.value = 100;
     contenedorImagen.style.filter = `contrast(${contrasteInicial}%)`;
     const desenfoqueInicial = desenfoqueImagen.value = 0;
@@ -293,5 +271,5 @@ btnReestablecerFiltros.addEventListener('click', (event) => {
     const saturadoInicial = saturadoImagen.value = 100;
     contenedorImagen.style.filter = `saturate(${saturadoInicial}%)`;
     const negativoInicial = negativoImagen.value = 0;
-    contenedorImagen.style.filter = `invert(${negativoInicial}%)`;
+    contenedorImagen.style.filter = `invert(${negativoInicial})`;
 });
