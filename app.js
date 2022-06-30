@@ -156,12 +156,14 @@ fondoTransparente.addEventListener('change', (event) => {
     if (event.target.checked) {
         parrafoSuperior.style.backgroundColor = 'transparent';
         parrafoInferior.style.backgroundColor = 'transparent';
+        parrafoSuperior.style.zIndex = '3';
         parrafoSuperior.style.position = 'absolute';
         parrafoInferior.style.position = 'absolute';
     }
     else {
         parrafoSuperior.style.backgroundColor = inputColorFondo.value;
         parrafoInferior.style.backgroundColor = inputColorFondo.value; 
+        parrafoSuperior.style.zIndex = '';
         parrafoSuperior.style.position = '';
         parrafoInferior.style.position = '';
     }   

@@ -93,6 +93,10 @@ body{
     bottom: 0;
 }
 
+#parrafo-superior{
+    top: 0;
+}
+
 .contenedor-texto{
     width: 100%;
     padding: 1.4rem 2rem ;
