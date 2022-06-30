@@ -115,15 +115,17 @@ body{
 
 #btn-descargar-meme{
     margin: 3rem 0 0 0;
-    padding: 0.5rem;
+    padding: 0.7rem 0.5rem;
     color:white;
     border: green 1px;
     background-color: green;
     border-radius: 0.3rem;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 #btn-descargar-meme:hover{
-    cursor: pointer;
+    background-color: rgb(13, 87, 13);
+    transition: 0.2s;
 }
 .fa-download{
     color: white;
