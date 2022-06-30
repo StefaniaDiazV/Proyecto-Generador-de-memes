@@ -70,11 +70,13 @@ btnModoOscuro.addEventListener('click', () => {
 });
 establecerTema(localStorage.getItem('theme') || preferenciasTema);
 
-btnDescargarMeme.addEventListener('click', (event) => {
+const descargarMeme = () => {
     domtoimage.toBlob(editorMemes).then(function (blob) {
         window.saveAs(blob, 'mi-meme.png')
     });
-});
+};
+btnDescargarMeme.addEventListener('click', descargarMeme);
+
 
 // FUNCIONALIDADES PANEL DE TEXTO
 
