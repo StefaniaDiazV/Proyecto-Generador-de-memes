@@ -363,7 +363,7 @@ input[type=range]:focus{
         display: none;
     }
     .contenedor-memes{
-        padding: 0 1rem ;
+        padding: 1rem 0.2rem ;
     }
     .btn-cerrar{
         display: block;
@@ -391,11 +391,11 @@ input[type=range]:focus{
         justify-content: flex-start;
     }
     .contenedor-memes{
-        padding: 1rem 0.5rem ;
+        padding: 1rem 0.1rem ;
     }
     .editor-memes{
         width: 90%;
-        max-width: 300px;
+        max-width: 350px;
         height: calc(90% / 2 - 1%) ;
     }
     .contenedor-imagen{

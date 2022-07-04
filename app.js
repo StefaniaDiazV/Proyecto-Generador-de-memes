@@ -4,6 +4,8 @@ const btnModoOscuro = document.getElementById('btn-modo-oscuro');
 const btnDescargarMeme = document.getElementById('btn-descargar-meme')
 const panelTexto = document.getElementById('panel-texto');
 const panelImagen = document.getElementById('panel-imagen');
+
+// ELEMENTOS TEXTO
 const btnCerrarPanelTexto = document.getElementById('btn-cerrar-panel-texto');
 const textoSuperior = document.getElementById('superior');
 const parrafoSuperior = document.getElementById('parrafo-superior');
