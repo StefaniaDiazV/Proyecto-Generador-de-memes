@@ -14,6 +14,7 @@
 </head>
 <body>
 
+    <!-- ******* MENÚ PRINCIPAL *******  -->
     <header tabindex="1" class="menu-principal">
         <h1 class="titulo" tabindex="2">Generador de memes</h1>
         <div class="contenedor-botones">
@@ -23,6 +24,7 @@
         </div>
     </header>
 
+    <!-- ******* CONTENEDOR MEME *******  -->
     <section class="contenedor-memes">
         <div class="editor-memes" id="editor">
             <p id="parrafo-superior" class="contenedor-texto">TOP TEXT</p>
@@ -32,6 +34,7 @@
         <button id="btn-descargar-meme"> <i class="fa-solid fa-download"></i>Descargar meme</button>
     </section>
 
+    <!-- ******* PANEL DE TEXTO *******  -->
     <aside id="panel-texto" class="panel-texto ocultar">
         <div id="btn-cerrar-panel-texto" class="btn-cerrar">
             <a href="#" tabindex="5" aria-label="Cerrar panel">X</a>
@@ -123,9 +126,9 @@
             <option>2</option>
             <option>2.5</option>
         </select>
-
     </aside>
 
+    <!-- ******* PANEL DE IMAGEN *******  -->
 
     <aside id="panel-imagen" class="panel-imagen  ocultar">
         <div id="btn-cerrar-panel-imagen" class="btn-cerrar">
@@ -185,10 +188,10 @@
         <input id="negativo-imagen" type="range" value="0" min="0" max="1" step="0.1" tabindex="19">
 
         <button class="btn" id="btn-reestablecer-filtros" tabindex="20">Reestablecer filtros</button>
-
     </aside>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
+</html>

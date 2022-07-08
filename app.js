@@ -1,7 +1,7 @@
 const btnImagen = document.getElementById('btn-imagen');
 const btnTexto = document.getElementById('btn-texto');
 const btnModoOscuro = document.getElementById('btn-modo-oscuro');
-const btnDescargarMeme = document.getElementById('btn-descargar-meme')
+const btnDescargarMeme = document.getElementById('btn-descargar-meme');
 const panelTexto = document.getElementById('panel-texto');
 const panelImagen = document.getElementById('panel-imagen');
 
@@ -52,13 +52,13 @@ const btnReestablecerFiltros = document.getElementById('btn-reestablecer-filtros
 // FUNCIONALIDADES MENU PRINCIPAL
 
 btnTexto.addEventListener('click', () => {
-    panelImagen.style.display = 'none'
-    panelTexto.style.display = 'block'
+    panelImagen.style.display = 'none';
+    panelTexto.style.display = 'block';
 });
 
 btnImagen.addEventListener('click', () => {
-    panelImagen.style.display = 'block'
-    panelTexto.style.display = 'none'
+    panelImagen.style.display = 'block';
+    panelTexto.style.display = 'none';
 });
 
 const preferenciasTema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -68,13 +68,13 @@ const establecerTema = (theme) => {
 }
 btnModoOscuro.addEventListener('click', () => {
     let cambiarTema = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-    establecerTema(cambiarTema)
+    establecerTema(cambiarTema);
 });
 establecerTema(localStorage.getItem('theme') || preferenciasTema);
 
 const descargarMeme = () => {
     domtoimage.toBlob(editorMemes).then(function (blob) {
-        window.saveAs(blob, 'mi-meme.png')
+        window.saveAs(blob, 'mi-meme.png');
     });
 };
 btnDescargarMeme.addEventListener('click', descargarMeme);
@@ -83,7 +83,7 @@ btnDescargarMeme.addEventListener('click', descargarMeme);
 // FUNCIONALIDADES PANEL DE TEXTO
 
 btnCerrarPanelTexto.addEventListener('click', () => {
-    panelTexto.style.display = 'none'
+    panelTexto.style.display = 'none';
 });
 
 const escribirTexto = (input, p) => {
@@ -119,19 +119,19 @@ tamanoFuente.addEventListener('change', (event) => {
     parrafoInferior.style.fontSize = `${tamanoActual}px`;
 });
 
-btnAlinearIzquierda.addEventListener('click', (event) => {
+btnAlinearIzquierda.addEventListener('click', () => {
     parrafoSuperior.style.textAlign = 'left';
     parrafoInferior.style.textAlign = 'left'
 }); 
 
-btnCentrar.addEventListener('click', (event) => {
+btnCentrar.addEventListener('click', () => {
     parrafoSuperior.style.textAlign = 'center';
-    parrafoInferior.style.textAlign = 'center'
+    parrafoInferior.style.textAlign = 'center';
 }); 
 
-btnAlinearDerecha.addEventListener('click', (event) => {
+btnAlinearDerecha.addEventListener('click', () => {
     parrafoSuperior.style.textAlign = 'right';
-    parrafoInferior.style.textAlign = 'right'
+    parrafoInferior.style.textAlign = 'right';
 });
 
 const pintarValorColor = (input, valor) => {
@@ -173,26 +173,26 @@ fondoTransparente.addEventListener('change', (event) => {
     }   
 });
 
-btnContornoNinguno.addEventListener('click', (event) => {
+btnContornoNinguno.addEventListener('click', () => {
     parrafoSuperior.style.textShadow = '';
     parrafoInferior.style.textShadow = '';
 });
-btnContornoClaro.addEventListener('click', (event) => {
+btnContornoClaro.addEventListener('click', () => {
     parrafoSuperior.style.textShadow = '-2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff';
     parrafoInferior.style.textShadow = '-2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff';
 });
-btnContornoOscuro.addEventListener('click', (event) => {
+btnContornoOscuro.addEventListener('click', () => {
     parrafoSuperior.style.textShadow = '-2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000';
     parrafoInferior.style.textShadow = '-2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000';
 });
 
-espaciadoTexto.addEventListener('input', (event) => {
+espaciadoTexto.addEventListener('input', () => {
     const valorActual = espaciadoTexto.value;
     parrafoSuperior.style.padding = `${valorActual}px`;
     parrafoInferior.style.padding = `${valorActual}px`;
 });
 
-interlineadoTexto.addEventListener('input', (event) => {
+interlineadoTexto.addEventListener('input', () => {
     const valorActual = interlineadoTexto.value;
     parrafoSuperior.style.lineHeight = valorActual;
     parrafoInferior.style.lineHeight = valorActual;
@@ -201,15 +201,15 @@ interlineadoTexto.addEventListener('input', (event) => {
 // FUNCIONALIDADES PANEL DE IMAGEN
 
 btnCerrarPanelImagen.addEventListener('click', () => {
-    panelImagen.style.display = 'none'
+    panelImagen.style.display = 'none';
 });
 
 urlImagen.addEventListener('change', (event) => {
     const urlActual = event.target.value;
-    contenedorImagen.style.backgroundImage = `url('${urlActual}')`
-    contenedorImagen.style.backgroundRepeat = `no-repeat`
-    contenedorImagen.style.backgroundSize = `cover`
-    contenedorImagen.style.backgroundPosition = 'center center'
+    contenedorImagen.style.backgroundImage = `url('${urlActual}')`;
+    contenedorImagen.style.backgroundRepeat = `no-repeat`;
+    contenedorImagen.style.backgroundSize = `cover`;
+    contenedorImagen.style.backgroundPosition = 'center center';
 });
 
 inputColorImagen.addEventListener('input', () => {
@@ -218,7 +218,7 @@ inputColorImagen.addEventListener('input', () => {
     editorMemes.style.backgroundColor = valor;
 });
 
-modoDeMezclaFondo.addEventListener('input', (event) => {
+modoDeMezclaFondo.addEventListener('input', () => {
     const valorActual = modoDeMezclaFondo.value;
     if(valorActual === 'Ninguno'){
         contenedorImagen.style.mixBlendMode = '';
@@ -246,7 +246,7 @@ const valorFiltros = () => {
     const valorSaturado = saturadoImagen.value;
     const valorNegativo = negativoImagen.value;
 
-    contenedorImagen.style.filter = `brightness(${valorBrillo}) opacity(${valorOpacidad}) contrast(${valorContraste}%) blur(${valorDesenfoque}px) grayscale(${valorGrises}%) sepia(${valorSepia}%) hue-rotate(${valorHue}deg) saturate(${valorSaturado}%) invert(${valorNegativo})`
+    contenedorImagen.style.filter = `brightness(${valorBrillo}) opacity(${valorOpacidad}) contrast(${valorContraste}%) blur(${valorDesenfoque}px) grayscale(${valorGrises}%) sepia(${valorSepia}%) hue-rotate(${valorHue}deg) saturate(${valorSaturado}%) invert(${valorNegativo})`;
 };
 
 brilloImagen.addEventListener('input', valorFiltros);
@@ -259,7 +259,7 @@ hueImagen.addEventListener('input', valorFiltros);
 saturadoImagen.addEventListener('input', valorFiltros); 
 negativoImagen.addEventListener('input', valorFiltros);
 
-btnReestablecerFiltros.addEventListener('click', (event) => {
+btnReestablecerFiltros.addEventListener('click', () => {
     const brilloInicial = brilloImagen.value = 1;
     contenedorImagen.style.filter = `brightness(${brilloInicial})`;
     const opacidadInicial = opacidadImagen.value  = 1;
