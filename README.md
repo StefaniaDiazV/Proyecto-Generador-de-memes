@@ -33,6 +33,10 @@ Este proyecto fue creado con HTML5, CSS y JavaScript.
 - Cambiar el modo de mezcla de la imagen 
 - Aplicar filtros
 - Reestablecer filtros
+
+### Pseudocódigo y DFD
+![Pseudocódigo y DFD del boton](./assets/img/pseudocodigo-dfd.jpg)
+
 ---
 El proyecto cuenta con diseño responsive y accesibilidad para mejorar la experiencia del usuario.
 
